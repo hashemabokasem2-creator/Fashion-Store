@@ -59,3 +59,13 @@ body {
 .carousel-fade .carousel-item {
   transition: opacity 1.2s ease-in-out !important;
 }
+
+.outline{
+  color: var(--accent-color) !important;
+  background-color: var(--background-button) !important;
+}
+
+.outline:hover{
+  background-color: var(--accent-color) !important;
+  color: var(--background-button) !important;
+}
