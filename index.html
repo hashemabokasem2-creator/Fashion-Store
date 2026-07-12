@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FashionStore</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- nav one -->
+    <nav
+      class="navbar p-0 blue d-flex flex-nowrap align-items-center w-100 overflow-hidden"
+    >
+      <div
+        class="navbar-brand d-flex align-items-center flex-shrink-1 me-2"
+        style="font-size: calc(10px + 0.5vw)"
+      >
+        <i class="bi bi-gear text-white me-2"></i>
+        <p class="text-white m-0 me-2 fw-bold">
+          BOOTSTRAP<span class="text-info me-3">MADE</span>
+        </p>
+        <div class="d-none d-sm-flex align-items-center">
+          <i class="bi bi-display mx-1 text-white"></i>
+          <i class="bi bi-tablet mx-1 text-white"></i>
+          <i class="bi bi-phone mx-1 text-white"></i>
+        </div>
+      </div>
+
+      <div
+        class="d-flex align-items-center justify-content-center flex-grow-1 px-1"
+        style="font-size: calc(10px + 0.4vw)"
+      >
+        <i class="bi bi-chevron-left text-secondary"></i>
+        <p class="m-0 mx-1 text-white fw-bold text-truncate">FashionStore</p>
+        <i class="bi bi-chevron-right text-secondary"></i>
+      </div>
+
+      <div class="d-flex align-items-center flex-shrink-0">
+        <i
+          class="bi bi-box-arrow-up-right fw-bold px-2 text-white"
+          style="font-size: calc(12px + 0.5vw)"
+        ></i>
+        <button
+          type="button"
+          class="btn btn-info rounded-0 text-white p-1 px-2 d-flex align-items-center"
+          style="font-size: calc(9px + 0.4vw)"
+        >
+          <i class="bi bi-download me-1"></i>
+          <span class="d-inline">DOWNLOAD</span>
+        </button>
+      </div>
+    </nav>
+    <!-- nav two -->
+    <nav class="navbar d-none d-lg-block">
+      <div class="d-flex justify-content-around w-100">
+        <div class="d-flex justify-content-between align-content-center gap-3">
+          <p>
+            <i class="bi bi-telephone-fill"></i> Customer Support:
+            <a
+              href="#"
+              class="nav-link d-inline-block ms-2 fw-medium alink"
+              style="color: var(--accent-color)"
+            >
+              +1 (234) 567-890</a
+            >
+          </p>
+          <p>
+            <i class="bi bi-envelope-fill"></i
+            ><a
+              href="#"
+              class="nav-link d-inline-block ms-2 fw-medium alink"
+              style="color: var(--accent-color)"
+            >
+              support@example.com</a
+            >
+          </p>
+        </div>
+        <div class="d-flex justify-content-between align-content-center gap-3">
+          <a
+            href="#"
+            class="nav-link d-inline-block alink"
+            style="color: var(--accent-color)"
+            ><i class="bi bi-truck me-2"></i>Track Order</a
+          >
+          <div class="dropdown d-inline-block">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle alink"
+              id="languageDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="color: var(--accent-color)"
+            >
+              <i class="bi bi-translate"></i>
+              <span class="mx-2">English</span>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li>
+                <a href="#" class="dropdown-item"
+                  ><i
+                    class="bi bi-check-lg me-2"
+                    style="color: var(--accent-color)"
+                  ></i>
+                  English</a
+                >
+              </li>
+              <li><a href="#" class="dropdown-item">Arabic</a></li>
+              <li><a href="#" class="dropdown-item">French</a></li>
+              <li><a href="#" class="dropdown-item">Spanish</a></li>
+            </ul>
+          </div>
+          <div class="dropdown d-inline-block">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle alink"
+              id="languageDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="color: var(--accent-color)"
+            >
+              <i class="bi bi-currency-dollar"></i>
+              <span>USD</span>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li>
+                <a href="#" class="dropdown-item"
+                  ><i
+                    class="bi bi-check-lg me-2"
+                    style="color: var(--accent-color)"
+                  ></i>
+                  USD</a
+                >
+              </li>
+              <li><a href="#" class="dropdown-item">EUR</a></li>
+              <li><a href="#" class="dropdown-item">GBP</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- nav three -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="d-flex justify-content-around w-100">
+        <a class="navbar-brand fw-bold fs-3" href="#">
+          Fashion<span style="color: var(--accent-color)">Store</span>
+        </a>
+        <div
+          class="input-group shadow-sm border rounded-3 overflow-hidden w-25 d-none d-lg-inline-flex"
+        >
+          <input
+            type="text"
+            class="form-control py-2 px-3 shadow-sm"
+            placeholder="Search for products..."
+            aria-label="Search for products"
+          />
+          <button
+            class="btn border-0 px-4 rounded-0 rounded-end-3"
+            type="button"
+            style="background-color: var(--accent-color)"
+          >
+            <i class="bi bi-search text-white fs-5"></i>
+          </button>
+        </div>
+        <div class="d-flex justify-content-between align-content-center gap-4">
+          <a
+            href="#"
+            class="nav-link d-inline-flex align-items-center gap-2 d-lg-none"
+          >
+            <i class="bi bi-search fs-4"></i>
+          </a>
+          <a href="#" class="nav-link d-inline-flex align-items-center gap-2">
+            <i class="bi bi-person fs-3"></i
+            ><span class="d-none d-md-block">Account</span>
+          </a>
+          <button
+            type="button"
+            class="btn border-0 p-0 position-relative d-inline-flex align-items-center gap-2 d-none d-md-inline-flex"
+          >
+            <i class="bi bi-heart fs-4"></i>
+            <span class="fw-medium text-dark">wishlist</span>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-circle d-flex align-items-center justify-content-center"
+              style="
+                width: 20px;
+                height: 20px;
+                font-size: 0.75rem;
+                padding: 0;
+                background-color: var(--accent-color);
+              "
+            >
+              0
+            </span>
+          </button>
+          <button
+            type="button"
+            class="btn border-0 p-0 position-relative d-inline-flex align-items-center gap-2"
+          >
+            <i class="bi bi-cart3 fs-4 text-dark"></i>
+            <span class="fw-medium text-dark d-none d-md-block">Cart</span>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-circle d-flex align-items-center justify-content-center"
+              style="
+                width: 20px;
+                height: 20px;
+                font-size: 0.75rem;
+                padding: 0;
+                background-color: var(--accent-color);
+              "
+            >
+              3
+            </span>
+          </button>
+          <button
+            class="navbar-toggler btn border-0 p-2 shadow-none d-md-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenuOffcanvas"
+            aria-controls="mobileMenuOffcanvas"
+            aria-label="Open Menu"
+          >
+            <i class="bi bi-list fs-2 text-dark"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <hr />
+    <!-- Offcanvas -->
+    <div
+      class="offcanvas offcanvas-end border-0 shadow-lg p-3 m-4"
+      style="width: 90%"
+      tabindex="-1"
+      id="mobileMenuOffcanvas"
+      aria-labelledby="mobileMenuOffcanvasLabel"
+    >
+      <div class="offcanvas-header border-0">
+        <button
+          type="button"
+          class="btn-close shadow-none fs-5"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="list-unstyled px-2">
+          <li class="d-flex justify-content-between align-items-center py-3">
+            <a class="text-decoration-none fw-bold text-danger fs-5" href="#"
+              >Home</a
+            >
+          </li>
+
+          <li class="d-flex justify-content-between align-items-center py-3">
+            <a class="text-decoration-none fw-medium text-dark fs-5" href="#"
+              >About</a
+            >
+          </li>
+
+          <li class="d-flex justify-content-between align-items-center py-3">
+            <a class="text-decoration-none fw-medium text-dark fs-5" href="#"
+              >Category</a
+            >
+          </li>
+
+          <li class="d-flex justify-content-between align-items-center py-3">
+            <a class="text-decoration-none fw-medium text-dark fs-5" href="#"
+              >Product Details</a
+            >
+          </li>
+
+          <li class="d-flex justify-content-between align-items-center py-3">
+            <a class="text-decoration-none fw-medium text-dark fs-5" href="#"
+              >Cart</a
+            >
+          </li>
+
+          <li class="d-flex justify-content-between align-items-center py-3">
+            <a class="text-decoration-none fw-medium text-dark fs-5" href="#"
+              >Checkout</a
+            >
+          </li>
+
+          <li class="py-3">
+            <div
+              class="d-flex justify-content-between align-items-center w-100"
+            >
+              <a class="text-decoration-none fw-medium text-dark fs-5" href="#"
+                >Dropdown</a
+              >
+
+              <button
+                class="btn btn-outline-danger rounded-circle p-0 d-flex align-items-center justify-content-center shadow-none"
+                style="width: 32px; height: 32px"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mySubMenu"
+                aria-expanded="false"
+                aria-controls="mySubMenu"
+              >
+                <i class="bi bi-chevron-down text-muted small"></i>
+              </button>
+            </div>
+
+            <div
+              class="collapse border rounded-4"
+              id="mySubMenu"
+              style="background-color: var(--bs-gray-400)"
+            >
+              <ul class="list-unstyled ps-3 mt-2">
+                <li class="py-2">
+                  <a class="text-decoration-none text-dark fs-5" href="#"
+                    >Dropdown 1</a
+                  >
+                </li>
+                <li class="py-2 px-3">
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100"
+                  >
+                    <a class="text-decoration-none text-dark fs-5" href="#"
+                      >Deep Dropdown</a
+                    >
+
+                    <button
+                      class="btn btn-outline-danger rounded-circle p-0 d-flex align-items-center justify-content-center shadow-none"
+                      style="width: 32px; height: 32px"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#myMenu"
+                      aria-expanded="false"
+                      aria-controls="mySubMenu"
+                    >
+                      <i class="bi bi-chevron-down text-muted small"></i>
+                    </button>
+                  </div>
+                  <div
+                    class="collapse border rounded-4"
+                    id="myMenu"
+                    style="background-color: var(--bs-gray-500)"
+                  >
+                    <ul class="list-unstyled px-3 mt-2">
+                      <li class="py-2">
+                        <a class="text-decoration-none text-dark fs-5" href="#"
+                          >Dropdown 1</a
+                        >
+                      </li>
+                      <li class="py-2">
+                        <a class="text-decoration-none text-dark fs-5" href="#"
+                          >Dropdown 2</a
+                        >
+                      </li>
+                      <li class="py-2">
+                        <a class="text-decoration-none text-dark fs-5" href="#"
+                          >Dropdown 3</a
+                        >
+                      </li>
+                      <li class="py-2">
+                        <a class="text-decoration-none text-dark fs-5" href="#"
+                          >Dropdown 4</a
+                        >
+                      </li>
+                      <li class="py-2">
+                        <a class="text-decoration-none text-dark fs-5" href="#"
+                          >Dropdown 5</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <a class="text-decoration-none text-dark fs-5" href="#"
+                    >Dropdown 3</a
+                  >
+                </li>
+                <li class="py-2">
+                  <a class="text-decoration-none text-dark fs-5" href="#"
+                    >Dropdown 4</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="d-flex flex-column py-2">
+            <div
+              class="d-flex justify-content-between align-items-center w-100"
+            >
+              <a class="text-decoration-none fw-medium text-dark fs-5" href="#"
+                >Megamenu 1</a
+              >
+
+              <button
+                class="btn btn-outline-danger rounded-circle p-0 d-flex align-items-center justify-content-center shadow-none"
+                style="width: 32px; height: 32px"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#megaMenu1"
+                aria-expanded="false"
+                aria-controls="megaMenu1"
+              >
+                <i class="bi bi-chevron-down text-muted small"></i>
+              </button>
+            </div>
+
+            <div class="collapse border rounded-4 mt-2" id="megaMenu1">
+              <ul class="list-unstyled p-3 mb-0">
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Featured Products</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >New Arrivals</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Sale items</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Clothing</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Electronics</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Home & Living</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#">Beauty</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="d-flex flex-column py-2">
+            <div
+              class="d-flex justify-content-between align-items-center w-100"
+            >
+              <a class="text-decoration-none fw-medium text-dark fs-5" href="#"
+                >Megamenu 2</a
+              >
+
+              <button
+                class="btn btn-outline-danger rounded-circle p-0 d-flex align-items-center justify-content-center shadow-none"
+                style="width: 32px; height: 32px"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#megaMenu2"
+                aria-expanded="false"
+                aria-controls="megaMenu2"
+              >
+                <i class="bi bi-chevron-down text-muted small"></i>
+              </button>
+            </div>
+
+            <div class="collapse border rounded-4 mt-2" id="megaMenu2">
+              <ul class="list-unstyled p-3 mb-0">
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Sub Item 1</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Sub Item 2</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Sub Item 3</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Sub Item 4</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Sub Item 5</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Sub Item 6</a
+                  >
+                </li>
+                <li class="py-2 border-bottom">
+                  <a class="text-decoration-none text-dark" href="#"
+                    >Sub Item 7</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="d-flex justify-content-between align-items-center py-2">
+            <a class="text-decoration-none fw-medium text-dark fs-5" href="#"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- end Offcanvas -->
+    <!-- nav four -->
+    <nav class="navbar navbar-light bg-light d-none d-md-block">
+      <div class="container">
+        <ul class="navbar-nav flex-row gap-3">
+          <li class="nav-item">
+            <a
+              class="nav-link fw-bold border-bottom border-3"
+              href="#"
+              style="
+                color: var(--accent-color);
+                border-color: var(--accent-color) !important;
+              "
+            >
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark fw-medium position-relative nav-animate"
+              href="#"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark fw-medium position-relative nav-animate"
+              href="#"
+              >Category</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark fw-medium position-relative nav-animate"
+              href="#"
+              >Product Details</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark fw-medium position-relative nav-animate"
+              href="#"
+              >Cart</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark fw-medium position-relative nav-animate"
+              href="#"
+              >Checkout</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark fw-medium position-relative nav-animate"
+              href="#"
+            >
+              Dropdown <i class="bi bi-chevron-down small"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark fw-medium position-relative nav-animate"
+              href="#"
+            >
+              Megamenu 1 <i class="bi bi-chevron-down small"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark fw-medium position-relative nav-animate"
+              href="#"
+            >
+              Megamenu 2 <i class="bi bi-chevron-down small"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark fw-medium position-relative nav-animate"
+              href="#"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- nav five -->
+    <nav
+      class="navbar justify-content-center align-items-center"
+      style="height: 40px; background-color: var(--accent-color)"
+    >
+      <div class="w-100 w-md-50 h-100 carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="text-center text-white">
+              💰 30 days money back guarantee
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="text-center text-white">
+              ⚡ Flash Sale! Up to 70% off on selected items
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="text-center text-white">
+              🎁 20% off on your first order - Use code: FIRST20
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="text-center text-white">
+              🚚 Free shipping on orders over $50
+            </p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- main -->
+    <main>
+      <!-- section one -->
+      <section class="container mt-5">
+        <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container mt-5">
+                <div class="row pt-5">
+                  <div class="col-md-6">
+                    <button
+                      class="btn rounded-5 fw-medium mb-4"
+                      style="
+                        background-color: var(--background-button);
+                        color: var(--color-button);
+                      "
+                    >
+                      limited Time
+                    </button>
+                    <h1 class="text-capitalize display-4">
+                      season
+                      <span
+                        class="border-bottom border-5"
+                        style="color: var(--color-button)"
+                        >sale</span
+                      >
+                      up to 50% off
+                    </h1>
+                    <p class="mb-4">
+                      Curabitur aliquet quam id dui posuere blandit. Nulla quis
+                      lorem ut libero malesuada feugiat. Mauris blandit aliquet
+                      elit, eget tincidunt nibh pulvinar.
+                    </p>
+                    <button
+                      class="btn d-flex justify-content-center align-items-center gap-3 px-3 py-2 mb-4"
+                      style="
+                        background-color: var(--color-button);
+                        color: var(--background-button);
+                      "
+                    >
+                      Shop Sale <span> <i class="bi bi-arrow-right"></i></span>
+                    </button>
+                    <p class="mb-4">Offer ends in :</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-4"
+                      style="width: 400px; height: 100px"
+                    >
+                      <div class="px-3 py-2 shadow rounded-3">
+                        <span
+                          class="d-block fw-medium"
+                          style="color: var(--color-button)"
+                          >-393</span
+                        >
+                        <small class="text-secondary"> Days </small>
+                      </div>
+                      <div class="px-3 py-2 shadow rounded-3">
+                        <span
+                          class="d-block ms-2 fw-medium"
+                          style="color: var(--color-button)"
+                          >-1</span
+                        >
+                        <small class="text-secondary"> Hours </small>
+                      </div>
+                      <div class="px-3 py-2 shadow rounded-3">
+                        <span
+                          class="d-block ms-2 fw-medium"
+                          style="color: var(--color-button)"
+                          >-60</span
+                        >
+                        <small class="text-secondary"> Minutes </small>
+                      </div>
+                      <div class="px-3 py-2 shadow rounded-3">
+                        <span
+                          class="d-block ms-2 fw-medium"
+                          style="color: var(--color-button)"
+                          >-20</span
+                        >
+                        <small class="text-secondary"> Seconds </small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="position-relative" style="width: 85%">
+                      <img
+                        class="w-100"
+                        src="img/product-8.jpg"
+                        alt="صورة حذاء"
+                      />
+                      <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-circle d-flex align-items-center justify-content-center"
+                        style="
+                          width: 100px;
+                          height: 100px;
+                          font-size: 1.5rem;
+                          padding: 0;
+                          background-color: var(--accent-color);
+                        "
+                      >
+                        50%<br />
+                        OFF
+                      </span>
+                      <div
+                        class="card border-0 shadow text-start"
+                        style="border-radius: 24px; max-width: 200px"
+                      >
+                        <div class="card-body">
+                          <h6 class="fw-bold text-dark mb-3">Best Seller</h6>
+
+                          <div class="d-flex align-items-center gap-3">
+                            <span
+                              class="text-body-secondary text-decoration-line-through"
+                              >$129.99</span
+                            >
+
+                            <span class="fw-bold" style="color: #800a43"
+                              >$64.99</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container mt-5">
+                <div class="row pt-5">
+                  <div class="col-md-6">
+                    <button
+                      class="btn rounded-5 fw-medium mb-4"
+                      style="
+                        background-color: var(--background-button);
+                        color: var(--color-button);
+                      "
+                    >
+                      Featured Collection
+                    </button>
+                    <h1 class="text-capitalize display-4 mb-5">
+                      Premium
+                      <span
+                        class="border-bottom border-5"
+                        style="color: var(--color-button)"
+                        >Quality</span
+                      >
+                      Products
+                    </h1>
+                    <p class="mb-5">
+                      Curabitur aliquet quam id dui posuere blandit. Nulla quis
+                      lorem ut libero malesuada feugiat. Mauris blandit aliquet
+                      elit, eget tincidunt nibh pulvinar.
+                    </p>
+                    <button
+                      class="btn d-flex justify-content-center align-items-center gap-3 px-3 py-2 mb-5"
+                      style="
+                        background-color: var(--color-button);
+                        color: var(--background-button);
+                      "
+                    >
+                      Explore Collection
+                      <span> <i class="bi bi-arrow-right"></i></span>
+                    </button>
+                    <div>
+                      <div class="d-flex gap-3">
+                        <span
+                          ><i
+                            class="bi bi-check-circle-fill"
+                            style="color: var(--color-button)"
+                          ></i
+                        ></span>
+                        <p>Premium Materials</p>
+                      </div>
+                      <div class="d-flex gap-3">
+                        <span
+                          ><i
+                            class="bi bi-check-circle-fill"
+                            style="color: var(--color-button)"
+                          ></i
+                        ></span>
+                        <p>Handcrafted Quality</p>
+                      </div>
+                      <div class="d-flex gap-3">
+                        <span
+                          ><i
+                            class="bi bi-check-circle-fill"
+                            style="color: var(--color-button)"
+                          ></i
+                        ></span>
+                        <p>Lifetime Warranty</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-5">
+                    <button
+                      class="btn rounded-5 d-flex justify-content-center align-items-center gap-3 px-3 py-2"
+                      style="
+                        background-color: var(--color-button);
+                        color: var(--background-button);
+                      "
+                    >
+                      <span><i class="bi bi-star-fill"></i></span> Featured
+                    </button>
+                    <div class="position-relative" style="width: 90%">
+                      <img
+                        class="w-100"
+                        src="img/product-9.webp"
+                        alt="صورة حقيبة نسائية"
+                      />
+                      <div
+                        class="card border-0 shadow p-4 rounded-4 position-absolute end-0 bottom-0 m-3"
+                        style="width: 300px; background-color: #fff"
+                      >
+                        <div class="card-body p-0">
+                          <div
+                            class="text-warning mb-2 fs-5"
+                            style="letter-spacing: 2px"
+                          >
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
+                          </div>
+
+                          <p class="card-text fst-italic text-dark mb-2 lh-sm">
+                            "Exceptional quality and design"
+                          </p>
+
+                          <p class="card-text text-secondary fw-semibold mb-0">
+                            - Satisfied Customer
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container mt-5">
+                <div class="row pt-5">
+                  <div class="col-md-6">
+                    <button
+                      class="btn rounded-5 fw-medium mb-4"
+                      style="
+                        background-color: var(--background-button);
+                        color: var(--color-button);
+                      "
+                    >
+                      New Arrivals
+                    </button>
+                    <h1 class="text-capitalize display-4 mb-5">
+                      Discover Our
+                      <span
+                        class="border-bottom border-5"
+                        style="color: var(--color-button)"
+                        >Latest</span
+                      >
+                      Collection
+                    </h1>
+                    <p class="mb-5">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Mollitia earum fugiat assumenda deleniti rem. Iste
+                      pariatur optio reprehenderit voluptate ex consectetur unde
+                      aliquid.
+                    </p>
+                    <button
+                      class="btn d-flex justify-content-center align-items-center gap-3 px-3 py-2 mb-5"
+                      style="
+                        background-color: var(--color-button);
+                        color: var(--background-button);
+                      "
+                    >
+                      Shop New Arrivals
+                      <span> <i class="bi bi-arrow-right"></i></span>
+                    </button>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="row mb-3">
+                      <div class="col-md-6">
+                        <div
+                          class="card shadow border-0 text-center rounded-4 p-3"
+                          style="background-color: #fff; height: 200px"
+                        >
+                          <div
+                            class="d-flex justify-content-center align-items-center flex-grow-1 overflow-hidden"
+                          >
+                            <img
+                              src="img/product-1.webp"
+                              class="h-100 object-fit-contain"
+                              alt="Product Image"
+                            />
+                          </div>
+
+                          <hr class="text-muted opacity-25 my-2" />
+
+                          <div class="card-body px-2 py-1 flex-grow-0">
+                            <h5
+                              class="card-title mb-1"
+                              style="
+                                color: #4a1525;
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                              "
+                            >
+                              Modern Style
+                            </h5>
+                            <p
+                              class="card-text fw-bold mb-0"
+                              style="color: #801040; font-size: 1.2rem"
+                            >
+                              $79.99
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div
+                          class="card shadow border-0 text-center rounded-4 p-3"
+                          style="background-color: #fff; height: 200px"
+                        >
+                          <div
+                            class="d-flex justify-content-center align-items-center flex-grow-1 overflow-hidden"
+                          >
+                            <img
+                              src="img/product-2.webp"
+                              class="h-100 object-fit-contain"
+                              alt="Product Image"
+                            />
+                          </div>
+
+                          <hr class="text-muted opacity-25 my-2" />
+
+                          <div class="card-body px-2 py-1 flex-grow-0">
+                            <h5
+                              class="card-title mb-1"
+                              style="
+                                color: #4a1525;
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                              "
+                            >
+                              Casual Collection
+                            </h5>
+                            <p
+                              class="card-text fw-bold mb-0"
+                              style="color: #801040; font-size: 1.2rem"
+                            >
+                              $64.99
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div
+                          class="card shadow border-0 text-center rounded-4 p-3"
+                          style="background-color: #fff; height: 200px"
+                        >
+                          <div
+                            class="d-flex justify-content-center align-items-center flex-grow-1 overflow-hidden"
+                          >
+                            <img
+                              src="img/product-6.webp"
+                              class="h-100 object-fit-contain"
+                              alt="Product Image"
+                            />
+                          </div>
+
+                          <hr class="text-muted opacity-25 my-2" />
+
+                          <div class="card-body px-2 py-1 flex-grow-0">
+                            <h5
+                              class="card-title mb-1"
+                              style="
+                                color: #4a1525;
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                              "
+                            >
+                              Premium Design
+                            </h5>
+                            <p
+                              class="card-text fw-bold mb-0"
+                              style="color: #801040; font-size: 1.2rem"
+                            >
+                              $89.99
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div
+                          class="card shadow border-0 text-center rounded-4 p-3"
+                          style="background-color: #fff; height: 200px"
+                        >
+                          <div
+                            class="d-flex justify-content-center align-items-center flex-grow-1 overflow-hidden"
+                          >
+                            <img
+                              src="img/product-11.png"
+                              class="h-100 object-fit-contain"
+                              alt="Product Image"
+                            />
+                          </div>
+
+                          <hr class="text-muted opacity-25 my-2" />
+
+                          <div class="card-body px-2 py-1 flex-grow-0">
+                            <h5
+                              class="card-title mb-1"
+                              style="
+                                color: #4a1525;
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                              "
+                            >
+                              Elegant Series
+                            </h5>
+                            <p
+                              class="card-text fw-bold mb-0"
+                              style="color: #801040; font-size: 1.2rem"
+                            >
+                              $74.99
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section one -->
+    </main>
+    <!-- end main -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+<!-- carousel-fade -->
+<!-- إنتبه هنا تغيير الحركة -->
+<!-- إنتبه التحكم بالوقت -->
+<!-- data-bs-interval -->

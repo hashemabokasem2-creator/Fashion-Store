@@ -1,0 +1,61 @@
+body {
+  font-family: "Ubuntu", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+.blue {
+  background-color: #2d465e;
+}
+
+:root {
+  --background-color: #ffffff;
+  --background-button: #f1e3ea;
+  --color-button: #8d0e52;
+  --default-color: #212529;
+  --heading-color: #3e0925;
+  --accent-color: #8c0d4f;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  --bs-gray-400: #e6ecf3;
+  --bs-gray-500: #c5ced7;
+}
+
+.alink {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.alink:hover {
+  opacity: 0.7;
+}
+
+.click {
+  color: var(--default-color);
+}
+
+.click:hover {
+  color: var(--accent-color);
+}
+
+.nav-animate::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-animate:hover::after {
+  width: 100%;
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 1.2s ease-in-out !important;
+}
