@@ -169,6 +169,15 @@ body {
   border-bottom-color: var(--accent-color, #800040);
 }
 
+#megamenu2Tabs .nav-link.active {
+  background-color: transparent !important;
+  border-bottom-color: var(--accent-color, #800040) !important;
+  color: var(--accent-color, #800040) !important;
+}
+#megamenu2Tabs .nav-link:hover {
+  border-bottom-color: var(--accent-color, #800040);
+}
+
 .navbar .dropdown .megamenu-content {
   display: block;
   position: absolute;
@@ -207,25 +216,25 @@ body {
 }
 
 .category-card .category-header::after {
-    content: "";
-    position: absolute;
-    bottom: -1px; 
-    left: 0;
-    width: 50px; 
-    height: 2px;
-    background-color: var(--accent-color, #800040);
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--accent-color, #800040);
 }
 
 .category-card .category-link i {
-    color: var(--accent-color, #800040); 
-    font-size: 0.75rem;
-    transition: transform 0.2s ease;
+  color: var(--accent-color, #800040);
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
 }
 
 .category-card .category-link:hover {
-    color: var(--accent-color, #800040) !important;
+  color: var(--accent-color, #800040) !important;
 }
 
 .category-card .category-link:hover i {
-    transform: translateX(3px);
+  transform: translateX(3px);
 }
