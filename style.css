@@ -60,12 +60,172 @@ body {
   transition: opacity 1.2s ease-in-out !important;
 }
 
-.outline{
+.outline {
   color: var(--accent-color) !important;
   background-color: var(--background-button) !important;
 }
 
-.outline:hover{
+.outline:hover {
   background-color: var(--accent-color) !important;
   color: var(--background-button) !important;
+}
+
+.cardstoup {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.cardstoup:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.22);
+  transform: translateY(-10px);
+}
+
+.navbar .dropdown .dropdown-menu {
+  display: block;
+  margin-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.4s;
+}
+
+.navbar .dropdown {
+  position: relative;
+}
+
+.navbar .dropdown .dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.4s;
+  z-index: 1000;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu .submenu {
+  position: relative;
+}
+
+.dropdown-menu .submenu .submenu-menu {
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 10px;
+  min-width: 180px;
+  background-color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropdown-menu .submenu .submenu-menu {
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 10px;
+  margin-right: 5px;
+
+  min-width: 180px;
+  background-color: #ffffff;
+  border-radius: 0.375rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateX(15px);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.4s;
+}
+
+.dropdown-menu .submenu:hover .submenu-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+#megamenuTabs .nav-link.active {
+  background-color: transparent !important;
+  border-bottom-color: var(--accent-color, #800040) !important;
+  color: var(--accent-color, #800040) !important;
+}
+#megamenuTabs .nav-link:hover {
+  border-bottom-color: var(--accent-color, #800040);
+}
+
+.navbar .dropdown .megamenu-content {
+  display: block;
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  width: 80%;
+  border-radius: 0.5rem;
+  z-index: 1050;
+
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.4s;
+}
+
+.navbar .dropdown:hover .megamenu-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.megamenu-content .card {
+  transition:
+    transform 0.2s ease,
+    shadow 0.2s ease;
+}
+.megamenu-content .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.category-card .category-header::after {
+    content: "";
+    position: absolute;
+    bottom: -1px; 
+    left: 0;
+    width: 50px; 
+    height: 2px;
+    background-color: var(--accent-color, #800040);
+}
+
+.category-card .category-link i {
+    color: var(--accent-color, #800040); 
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.category-card .category-link:hover {
+    color: var(--accent-color, #800040) !important;
+}
+
+.category-card .category-link:hover i {
+    transform: translateX(3px);
 }
