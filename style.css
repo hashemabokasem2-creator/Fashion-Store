@@ -283,3 +283,52 @@ body {
 .card:hover .zoom-img {
   transform: scale(1.1);
 }
+
+.custom-card {
+    font-family: 'Outfit', sans-serif !important;
+}
+
+.transition-all {
+  transition: all 0.4s ease-in-out;
+}
+
+.card-img-container {
+  border-radius: 8px;
+}
+
+.img-secondary {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.custom-card:hover .img-primary {
+  opacity: 0;
+  visibility: hidden;
+}
+.custom-card:hover .img-secondary {
+  opacity: 1;
+  visibility: hidden;
+  visibility: visible;
+}
+
+.hover-buttons .hover-btn-item {
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-card:hover .hover-buttons .hover-btn-item {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.hover-buttons .hover-btn-item:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.hover-buttons .hover-btn-item:hover {
+  background-color: #70003c !important;
+}
+.hover-buttons .hover-btn-item:hover i {
+  color: #ffffff !important;
+}
