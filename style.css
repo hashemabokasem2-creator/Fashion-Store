@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Ubuntu", sans-serif !important;
   -webkit-font-smoothing: antialiased;
@@ -186,13 +190,10 @@ body {
   width: 80%;
   border-radius: 0.5rem;
   z-index: 1050;
-
   left: 50%;
   transform: translateX(-50%) translateY(20px);
-
   opacity: 0;
   visibility: hidden;
-
   transition:
     opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
@@ -237,4 +238,48 @@ body {
 
 .category-card .category-link:hover i {
   transform: translateX(3px);
+}
+
+.bg-custom-purple {
+  background-color: #6b0642 !important;
+  transition: all 0.3s ease-in-out;
+}
+.bg-custom-purple:hover {
+  background-color: #4a042c !important;
+  transform: translateY(-3px);
+}
+
+.custom-tab-btn {
+  color: #7b808c !important;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  background-color: transparent !important;
+  transition:
+    color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+}
+
+.custom-tab-btn:hover {
+  color: #4a0329 !important;
+}
+
+.custom-tab-btn.active {
+  color: #4a0329 !important;
+  border-bottom-color: #4a0329 !important;
+}
+
+.border-transparent {
+  border-bottom-color: transparent !important;
+}
+
+.megamenu-content .tab-content {
+  border-top: 1px solid #e9ecef !important;
+}
+
+.zoom-img {
+  transition: transform 0.5s ease-in-out !important;
+}
+
+.card:hover .zoom-img {
+  transform: scale(1.1);
 }
