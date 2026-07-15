@@ -467,3 +467,12 @@ body {
   overflow: hidden;
   pointer-events: none;
 }
+
+.btn-arrow-hover .arrow-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-arrow-hover:hover .arrow-icon {
+  transform: translateX(6px);
+}
