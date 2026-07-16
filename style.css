@@ -476,3 +476,15 @@ body {
 .btn-arrow-hover:hover .arrow-icon {
   transform: translateX(6px);
 }
+
+footer .p {
+  font: 1em sans-serif;
+}
+
+.column-link {
+  transition: color 0.25s ease;
+}
+
+.column-link:hover {
+  color: var(--color-button) !important;
+}
