@@ -240,15 +240,6 @@ body {
   transform: translateX(3px);
 }
 
-.bg-custom-purple {
-  background-color: #6b0642 !important;
-  transition: all 0.3s ease-in-out;
-}
-.bg-custom-purple:hover {
-  background-color: #4a042c !important;
-  transform: translateY(-3px);
-}
-
 .custom-tab-btn {
   color: #7b808c !important;
   font-size: 0.95rem;
@@ -478,6 +469,10 @@ body {
 }
 
 footer .p {
+  font: 1em sans-serif !important;
+}
+
+.texts {
   font: 1em sans-serif;
 }
 

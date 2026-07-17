@@ -27,3 +27,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+const backToTopBtn = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 600) {
+    backToTopBtn.classList.add("show");
+    backToTopBtn.style.pointerEvents = "auto";
+  } else {
+    backToTopBtn.classList.remove("show");
+    backToTopBtn.style.pointerEvents = "none";
+  }
+});
+
+backToTopBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
