@@ -46,3 +46,26 @@ backToTopBtn.addEventListener("click", (e) => {
     behavior: "smooth",
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const rangeInput = document.getElementById("priceRange");
+
+  const maxInput = document.getElementById("maxInput");
+
+  function updateSliderAndInput() {
+    if (!rangeInput || !maxInput) return;
+
+    const min = rangeInput.min || 0;
+    const max = rangeInput.max || 1000;
+    const value = rangeInput.value;
+
+    const percentage = ((value - min) / (max - min)) * 100;
+    rangeInput.style.backgroundSize = `${percentage}% 100%`;
+
+    maxInput.value = value;
+  }
+
+  updateSliderAndInput();
+
+  rangeInput.addEventListener("input", updateSliderAndInput);
+});

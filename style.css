@@ -483,3 +483,198 @@ footer .p {
 .column-link:hover {
   color: var(--color-button) !important;
 }
+
+.category-trigger {
+  color: #212529;
+  transition: color 0.2s ease;
+}
+.category-trigger:hover {
+  color: var(--color-button) !important;
+}
+.category-item {
+  color: #6c757d;
+  transition: color 0.2s ease;
+}
+.category-item:hover {
+  color: var(--color-button) !important;
+}
+
+.category-trigger .arrow-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+.category-trigger.collapsed .arrow-icon {
+  transform: rotate(0deg);
+}
+
+.form-control::placeholder {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #a0a0a0 !important;
+}
+.form-select {
+  font-size: 0.85rem !important;
+  font-weight: 300;
+}
+
+.btn-hover-gray {
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-hover-gray:hover {
+  background-color: #f0f0f0 !important;
+  border-color: var(--color-button) !important;
+  color: var(--color-button) !important;
+}
+
+.exclusive-product-card {
+  transition: all 0.4s ease !important;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.exclusive-product-card:hover {
+  transform: translateY(-6px);
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.exclusive-action-buttons {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.35s ease;
+  z-index: 2;
+}
+
+.exclusive-product-card:hover .exclusive-action-buttons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exclusive-round-btn {
+  width: 38px;
+  height: 38px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+.exclusive-round-btn:hover {
+  transform: scale(1.05);
+}
+
+.exclusive-boot-btn {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.3s ease !important;
+  z-index: 5;
+}
+
+.exclusive-product-card:hover .exclusive-boot-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exclusive-product-card .exclusive-img {
+  transition: transform 0.3s ease;
+}
+
+.exclusive-product-card:hover .exclusive-img {
+  transform: scale(1.1);
+}
+
+.custom-page-btn {
+  min-width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px !important;
+}
+
+.custom-page-btn.active {
+  background-color: var(--color-button) !important;
+  box-shadow: 0 4px 12px rgba(128, 0, 64, 0.2) !important;
+}
+
+.clear {
+  transition: all 0.3s ease !important;
+}
+
+.clear:hover {
+  color: black !important;
+  transform: scale(1.1) !important;
+  transform: translateY(-5px) !important;
+}
+
+.brand-list .form-check-input {
+  border: 1px solid #ccc;
+  transition: all 0.2s ease;
+}
+
+.brand-list .form-check-input:checked {
+  background-color: var(--color-button);
+  border-color: var(--color-button);
+}
+
+.brand-list .form-check-input:focus {
+  box-shadow: none !important;
+  border-color: #ccc;
+}
+
+.brand-list .form-check-input:checked:focus {
+  border-color: var(--color-button) !important;
+}
+
+.custom-check-sm {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.brand-list-search {
+  border: 1px solid #ccc;
+  transition:
+    border-width 0.1s ease,
+    border-color 0.2s ease;
+}
+
+.brand-list-search:focus {
+  box-shadow: none !important;
+  border-color: var(--color-button) !important;
+  border-width: 2px !important;
+}
+
+.custom-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #e0e0e0; 
+  background-image: linear-gradient(var(--color-button), var(--color-button));
+  background-repeat: no-repeat;
+}
+
+.custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-button);
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(128, 0, 64, 0.2);
+  transition: 0.1s ease-in-out;
+}
+
+.custom-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-button);
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(128, 0, 64, 0.2);
+  transition: 0.1s ease-in-out;
+}
