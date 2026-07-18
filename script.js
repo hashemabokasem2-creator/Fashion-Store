@@ -69,3 +69,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
   rangeInput.addEventListener("input", updateSliderAndInput);
 });
+
+const element232 = document.getElementById("counter-232");
+const element521 = document.getElementById("counter-521");
+const element1453 = document.getElementById("counter-1453");
+const element32 = document.getElementById("counter-32");
+
+const target232 = 232;
+const target521 = 521;
+const target1453 = 1453;
+const target32 = 32;
+
+const duration = 1500;
+const startTime = performance.now();
+
+function updateCounter232(currentTime) {
+  const elapsedTime = currentTime - startTime;
+  const progress = Math.min(elapsedTime / duration, 1);
+
+  element232.textContent = Math.floor(progress * target232);
+
+  if (progress < 1) {
+    requestAnimationFrame(updateCounter232);
+  }
+}
+
+function updateCounter521(currentTime) {
+  const elapsedTime = currentTime - startTime;
+  const progress = Math.min(elapsedTime / duration, 1);
+
+  element521.textContent = Math.floor(progress * target521);
+
+  if (progress < 1) {
+    requestAnimationFrame(updateCounter521);
+  }
+}
+
+function updateCounter1453(currentTime) {
+  const elapsedTime = currentTime - startTime;
+  const progress = Math.min(elapsedTime / duration, 1);
+
+  element1453.textContent = Math.floor(progress * target1453);
+
+  if (progress < 1) {
+    requestAnimationFrame(updateCounter1453);
+  }
+}
+
+function updateCounter32(currentTime) {
+  const elapsedTime = currentTime - startTime;
+  const progress = Math.min(elapsedTime / duration, 1);
+
+  element32.textContent = Math.floor(progress * target32);
+
+  if (progress < 1) {
+    requestAnimationFrame(updateCounter32);
+  }
+}
+
+requestAnimationFrame(updateCounter232);
+requestAnimationFrame(updateCounter521);
+requestAnimationFrame(updateCounter1453);
+requestAnimationFrame(updateCounter32);
