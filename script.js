@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
   stars.forEach((star) => {
     star.addEventListener("mouseenter", function () {
       const currentHoverValue = parseInt(this.getAttribute("data-value"));
-      highlightStars(currentHoverValue);
+      hoverStars(currentHoverValue);
     });
   });
 
@@ -253,6 +253,22 @@ document.addEventListener("DOMContentLoaded", function () {
     stars.forEach((star) => {
       const starValue = parseInt(star.getAttribute("data-value"));
       if (starValue <= count) {
+        star.classList.remove("bi-star");
+        star.classList.add("bi-star-fill");
+      } else {
+        star.classList.remove("bi-star-fill");
+        star.classList.add("bi-star");
+      }
+    });
+  }
+
+  function hoverStars(hoverCount) {
+    stars.forEach((star) => {
+      const starValue = parseInt(star.getAttribute("data-value"));
+      if (starValue <= selectedRating) {
+        return;
+      }
+      if (starValue <= hoverCount) {
         star.classList.remove("bi-star");
         star.classList.add("bi-star-fill");
       } else {
