@@ -223,3 +223,42 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const stars = document.querySelectorAll(
+    ".star-rating-container .custom-star-icon",
+  );
+  let selectedRating = 0;
+
+  stars.forEach((star) => {
+    star.addEventListener("mouseenter", function () {
+      const currentHoverValue = parseInt(this.getAttribute("data-value"));
+      highlightStars(currentHoverValue);
+    });
+  });
+
+  const container = document.querySelector(".star-rating-container");
+  container.addEventListener("mouseleave", function () {
+    highlightStars(selectedRating);
+  });
+
+  stars.forEach((star) => {
+    star.addEventListener("click", function () {
+      selectedRating = parseInt(this.getAttribute("data-value"));
+      highlightStars(selectedRating);
+    });
+  });
+
+  function highlightStars(count) {
+    stars.forEach((star) => {
+      const starValue = parseInt(star.getAttribute("data-value"));
+      if (starValue <= count) {
+        star.classList.remove("bi-star");
+        star.classList.add("bi-star-fill");
+      } else {
+        star.classList.remove("bi-star-fill");
+        star.classList.add("bi-star");
+      }
+    });
+  }
+});

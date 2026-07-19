@@ -995,3 +995,62 @@ footer .p {
   font-size: 0.85rem;
   line-height: 1.5;
 }
+
+.review-form-title {
+  color: var(--heading-color);
+}
+
+.custom-label {
+  color: var(--heading-color);
+  font-size: 0.95rem;
+}
+
+.custom-submit-btn {
+  background-color: var(--color-button) !important;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.custom-title-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-button);
+  border-radius: 2px;
+}
+
+.star-rating-container {
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-rating-container .bi-star-fill {
+  color: #ffc107;
+}
+
+.custom-input {
+  border: 1px solid #ced4da !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 0.75rem;
+  transition:
+    border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out !important;
+}
+
+.custom-input:focus {
+  border-color: var(--heading-color) !important;
+  box-shadow: 0 0 0 0.25rem rgba(var(--heading-color-rgb, 128, 0, 32), 0.15) !important;
+  outline: 0;
+}
+
+.small-hint-text {
+  font-size: 0.8rem;
+}
+
+.small-status-text {
+  font-size: 0.85rem;
+}
