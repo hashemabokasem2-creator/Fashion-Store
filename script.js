@@ -131,3 +131,95 @@ requestAnimationFrame(updateCounter232);
 requestAnimationFrame(updateCounter521);
 requestAnimationFrame(updateCounter1453);
 requestAnimationFrame(updateCounter32);
+
+const container = document.getElementById("magnifierContainer");
+const mainImage = document.getElementById("mainImage");
+
+function updateBackground() {
+  container.style.backgroundImage = `url('${mainImage.src}')`;
+}
+updateBackground();
+
+container.addEventListener("mousemove", function (e) {
+  if (e.target.closest(".nav-btn")) {
+    container.style.backgroundSize = "100%";
+    mainImage.style.opacity = "1";
+    return;
+  }
+
+  const rect = e.currentTarget.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const xPercent = (x / rect.width) * 100;
+  const yPercent = (y / rect.height) * 100;
+
+  container.style.backgroundSize = "250%";
+  container.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+  mainImage.style.opacity = "0";
+});
+
+container.addEventListener("mouseleave", function () {
+  container.style.backgroundSize = "100%";
+  mainImage.style.opacity = "1";
+});
+
+function changeImage(imgElement) {
+  mainImage.src = imgElement.src;
+
+  updateBackground();
+  container.style.backgroundSize = "100%";
+  mainImage.style.opacity = "1";
+
+  document.querySelectorAll(".thumb").forEach((thumb) => {
+    thumb.classList.remove("active");
+  });
+  imgElement.classList.add("active");
+}
+function nextImage(e) {
+  e.stopPropagation();
+  const thumbs = Array.from(document.querySelectorAll(".thumb"));
+  const activeIndex = thumbs.findIndex((thumb) =>
+    thumb.classList.contains("active"),
+  );
+
+  let nextIndex = activeIndex + 1;
+  if (nextIndex >= thumbs.length) {
+    nextIndex = 0;
+  }
+
+  changeImage(thumbs[nextIndex]);
+}
+
+function prevImage(e) {
+  e.stopPropagation();
+  const thumbs = Array.from(document.querySelectorAll(".thumb"));
+  const activeIndex = thumbs.findIndex((thumb) =>
+    thumb.classList.contains("active"),
+  );
+
+  let prevIndex = activeIndex - 1;
+  if (prevIndex < 0) {
+    prevIndex = thumbs.length - 1;
+  }
+
+  changeImage(thumbs[prevIndex]);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("quantity-input");
+  const btnDecrease = document.getElementById("btn-decrease");
+  const btnIncrease = document.getElementById("btn-increase");
+
+  btnIncrease.addEventListener("click", function () {
+    let currentValue = parseInt(input.value) || 1;
+    input.value = currentValue + 1;
+  });
+
+  btnDecrease.addEventListener("click", function () {
+    let currentValue = parseInt(input.value) || 1;
+    if (currentValue > 1) {
+      input.value = currentValue - 1;
+    }
+  });
+});

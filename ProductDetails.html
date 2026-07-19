@@ -546,7 +546,8 @@
             <a
               class="nav-link text-dark fw-medium position-relative nav-animate"
               href="index.html"
-             >Home</a>
+              >Home</a
+            >
           </li>
 
           <li class="nav-item">
@@ -567,7 +568,7 @@
             <a
               class="nav-link fw-bold border-bottom border-3"
               href="ProductDetails.html"
-               style="
+              style="
                 color: var(--accent-color);
                 border-color: var(--accent-color) !important;
               "
@@ -2572,6 +2573,444 @@
           </div>
         </div>
       </div>
+      <!-- section one -->
+      <section class="bg-body-tertiary py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-1">
+                  <li class="breadcrumb-item">
+                    <a
+                      href="#"
+                      class="text-danger-emphasis text-decoration-none"
+                      >Home</a
+                    >
+                  </li>
+                  <li
+                    class="breadcrumb-item active text-dark-emphasis"
+                    aria-current="page"
+                  >
+                    Product Details
+                  </li>
+                </ol>
+              </nav>
+              <h2 class="text-danger-emphasis mt-2">Product Details</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section one -->
+      <!-- section two -->
+      <section class="container mt-4">
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="row g-2">
+              <div class="col-3 d-flex flex-column align-items-center gap-2">
+                <img
+                  src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop&q=80"
+                  class="thumb img-thumbnail active"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&auto=format&fit=crop&q=80"
+                  class="thumb img-thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&auto=format&fit=crop&q=80"
+                  class="thumb img-thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=800&auto=format&fit=crop&q=80"
+                  class="thumb img-thumbnail"
+                  onclick="changeImage(this)"
+                />
+              </div>
+
+              <div class="col-9">
+                <div
+                  id="magnifierContainer"
+                  class="magnifier-container w-100 position-relative"
+                >
+                  <button
+                    class="nav-btn outline prev-btn"
+                    onclick="prevImage(event)"
+                  >
+                    <i class="bi bi-chevron-left"></i>
+                  </button>
+                  <img
+                    id="mainImage"
+                    src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop&q=80"
+                    class="img-fluid w-100 h-100 object-fit-cover"
+                  />
+                  <button
+                    class="nav-btn outline next-btn"
+                    onclick="nextImage(event)"
+                  >
+                    <i class="bi bi-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card h-100 shadow-sm border-0 p-4 texts rounded-3">
+                  <div
+                    class="card-body p-2 d-flex flex-column gap-2 justify-content-between"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span
+                        class="text-uppercase text-secondary fw-bold"
+                        style="font-size: 0.7rem; letter-spacing: 0.05em"
+                      >
+                        HEADPHONES
+                      </span>
+                      <div class="dropdown" id="shareDropdown">
+                        <button
+                          class="btn btn-link text-decoration-none p-0 border-0 share-icon-btn"
+                          type="button"
+                          id="shareMenuButton"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i
+                            class="bi bi-share"
+                            style="font-size: 1rem; color: var(--color-button)"
+                          ></i>
+                        </button>
+                        <ul
+                          class="dropdown-menu dropdown-menu-end shadow border-0 p-2"
+                          aria-labelledby="shareMenuButton"
+                          style="min-width: auto; white-space: nowrap"
+                        >
+                          <li class="d-flex align-items-center gap-2 px-2">
+                            <a
+                              class="btn btn-light outline rounded-circle d-flex align-items-center justify-content-center p-0 text-dark"
+                              href="#"
+                              style="
+                                width: 35px;
+                                height: 35px;
+                                background-color: #e9ecef;
+                              "
+                            >
+                              <i
+                                class="bi bi-facebook"
+                                style="font-size: 1.1rem"
+                              ></i>
+                            </a>
+                            <a
+                              class="btn btn-light outline rounded-circle d-flex align-items-center justify-content-center p-0 text-dark"
+                              href="#"
+                              style="
+                                width: 35px;
+                                height: 35px;
+                                background-color: #e9ecef;
+                              "
+                            >
+                              <i
+                                class="bi bi-twitter-x"
+                                style="font-size: 1rem"
+                              ></i>
+                            </a>
+                            <a
+                              class="btn btn-light outline rounded-circle d-flex align-items-center justify-content-center p-0 text-dark"
+                              href="#"
+                              style="
+                                width: 35px;
+                                height: 35px;
+                                background-color: #e9ecef;
+                              "
+                            >
+                              <i
+                                class="bi bi-pinterest"
+                                style="font-size: 1.1rem"
+                              ></i>
+                            </a>
+                            <a
+                              class="btn btn-light outline rounded-circle d-flex align-items-center justify-content-center p-0 text-dark"
+                              href="#"
+                              style="
+                                width: 35px;
+                                height: 35px;
+                                background-color: #e9ecef;
+                              "
+                            >
+                              <i
+                                class="bi bi-envelope"
+                                style="font-size: 1.1rem"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <h4 class="card-title fw-bold m-0" style="line-height: 1.3">
+                      Lorem Ipsum Wireless Noise <br />
+                      Cancelling Headphones
+                    </h4>
+                    <div
+                      class="d-flex align-items-center text-secondary"
+                      style="font-size: 0.8rem"
+                    >
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="text-warning d-flex align-items-center gap-1 me-2"
+                          style="font-size: 0.9rem"
+                        >
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                        <span
+                          class="fw-bold me-2"
+                          style="font-size: 0.9rem; color: #212529"
+                          >4.5</span
+                        >
+                      </div>
+                      <span class="text-secondary fw-normal">42 Reviews</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 mt-4">
+                <div
+                  class="card custom-card border-0 p-3 d-flex flex-column gap-1"
+                >
+                  <div class="price-row d-flex align-items-baseline">
+                    <span class="current-price mb-1">$249.99</span>
+                    <span class="original-price ms-2 mb-1">$299.99</span>
+                  </div>
+
+                  <span class="discount-badge text-center mb-2">Save 17%</span>
+
+                  <div class="stock-info d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill stock-icon me-1"></i>
+                    <span class="stock-status me-1">In Stock</span>
+                    <span class="stock-count">(24 items left)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mt-4">
+                  <p class="texts text-secondary" style="line-height: 1.5rem">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vestibulum at lacus congue, suscipit elit nec, tincidunt
+                    orci. Phasellus egestas nisi vitae lectus imperdiet
+                    venenatis.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div
+                  class="card border-0 texts bg-transparent p-4 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="custom-section-title fw-bold">Color</span>
+                      <span class="text-muted small">Black</span>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div
+                        class="color-circle-wrapper rounded-circle active d-inline-flex align-items-center justify-content-center"
+                      >
+                        <span
+                          class="color-circle rounded-circle bg-black-variant d-flex align-items-center justify-content-center"
+                        >
+                          <i class="bi bi-check text-white fs-5"></i>
+                        </span>
+                      </div>
+                      <div
+                        class="color-circle-wrapper rounded-circle d-inline-flex align-items-center justify-content-center"
+                      >
+                        <span
+                          class="color-circle rounded-circle bg-grey-variant d-flex align-items-center justify-content-center"
+                        ></span>
+                      </div>
+                      <div
+                        class="color-circle-wrapper rounded-circle d-inline-flex align-items-center justify-content-center"
+                      >
+                        <span
+                          class="color-circle rounded-circle bg-blue-variant d-flex align-items-center justify-content-center"
+                        ></span>
+                      </div>
+                      <div
+                        class="color-circle-wrapper rounded-circle d-inline-flex align-items-center justify-content-center"
+                      >
+                        <span
+                          class="color-circle rounded-circle bg-pink-variant d-flex align-items-center justify-content-center"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="custom-section-title fw-bold">Size</span>
+                      <span class="text-muted small">M</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <button
+                        type="button"
+                        class="btn custom-size-btn border rounded-3 fw-medium text-dark"
+                      >
+                        S
+                      </button>
+                      <button
+                        type="button"
+                        class="btn custom-size-btn active shadow-sm rounded-3 fw-medium"
+                      >
+                        M
+                      </button>
+                      <button
+                        type="button"
+                        class="btn custom-size-btn border rounded-3 fw-medium text-dark"
+                      >
+                        L
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="custom-section-title fw-bold d-block mb-2"
+                      >Quantity</span
+                    >
+                    <div
+                      class="input-group border rounded-3 overflow-hidden custom-quantity-picker"
+                    >
+                      <button
+                        class="btn custom-size-btn"
+                        type="button"
+                        id="btn-decrease"
+                      >
+                        <i class="bi bi-dash"></i>
+                      </button>
+                      <input
+                        type="text"
+                        class="form-control text-center bg-white border-0 border-start border-end fw-medium p-0"
+                        id="quantity-input"
+                        value="1"
+                        readonly
+                      />
+                      <button
+                        class="btn custom-size-btn"
+                        type="button"
+                        id="btn-increase"
+                      >
+                        <i class="bi bi-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="d-flex align-items-center gap-3 w-100">
+                  <button
+                    class="btn btn-custom-filled fw-bold text-white flex-grow-1 d-flex align-items-center exclusive-product-card justify-content-center gap-2 py-2"
+                  >
+                    <i class="bi bi-cart-plus fs-5"></i>
+                    Add to Cart
+                  </button>
+
+                  <button
+                    class="btn btn-custom-outline fw-bold flex-grow-1 d-flex align-items-center exclusive-product-card justify-content-center gap-2 py-2"
+                  >
+                    <i class="bi bi-lightning-fill"></i>
+                    Buy Now
+                  </button>
+
+                  <button
+                    class="btn btn-custom-heart d-flex align-items-center exclusive-product-card justify-content-center py-2px-3"
+                  >
+                    <i class="bi bi-heart fs-5"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-12 texts">
+                <div class="row align-items-center py-4 g-2">
+                  <div
+                    class="col-4 d-flex align-items-start gap-2 exclusive-product-card"
+                  >
+                    <i class="bi bi-truck fs-4 feature-custom-style"></i>
+                    <div>
+                      <h6 class="mb-1 feature-custom-style small">
+                        Free Shipping
+                      </h6>
+                      <p class="text-muted mb-0" style="font-size: 0.75rem">
+                        On orders over $50
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col-4 d-flex align-items-start gap-2 exclusive-product-card"
+                  >
+                    <i
+                      class="bi bi-arrow-counterclockwise fs-4 feature-custom-style"
+                    ></i>
+                    <div>
+                      <h6 class="mb-1 feature-custom-style small">
+                        30-Day <br />
+                        Returns
+                      </h6>
+                      <p class="text-muted mb-0" style="font-size: 0.75rem">
+                        Hassle-free returns
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col-4 d-flex align-items-start gap-2 exclusive-product-card"
+                  >
+                    <i class="bi bi-shield-check fs-4 feature-custom-style"></i>
+                    <div>
+                      <h6 class="mb-1 feature-custom-style small">
+                        2-Year <br />
+                        Warranty
+                      </h6>
+                      <p class="text-muted mb-0" style="font-size: 0.75rem">
+                        Full <br />
+                        coverage
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section two -->
+      <!-- section three -->
+        <section class="container mt-5">
+          
+        </section>
+      <!-- end section three -->
+      <a
+        href="#"
+        id="backToTop"
+        class="position-fixed bottom-0 end-0 mb-4 me-4 d-flex align-items-center justify-content-center rounded-circle text-white shadow bg-custom-purple fade"
+        style="
+          width: 48px;
+          height: 48px;
+          z-index: 2000;
+          text-decoration: none;
+          pointer-events: none;
+          background-color: var(--color-button);
+        "
+      >
+        <i class="bi bi-arrow-up fw-bold"></i>
+      </a>
     </main>
     <!-- end main -->
     <!-- footer -->
