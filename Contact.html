@@ -215,7 +215,9 @@
           </button>
           <button
             type="button"
-            class="btn border-0 p-0 position-relative d-inline-flex align-items-center gap-2"
+            class="btn border-0 p-0 position-relative d-inline-flex align-items-center gap-2 dropdown-toggle custom-cart-dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
             <i class="bi bi-cart3 fs-4 text-dark"></i>
             <span class="fw-medium text-dark d-none d-md-block">Cart</span>
@@ -232,6 +234,99 @@
               3
             </span>
           </button>
+          <div
+            class="dropdown-menu dropdown-menu-end texts custom-cart-dropdown p-3 shadow-sm border-0 mt-2"
+          >
+            <div class="pb-2 mb-3 border-bottom">
+              <h6 class="mb-0 cart-title">Shopping Cart (3)</h6>
+            </div>
+            <div class="cart-items-list d-flex flex-column gap-3 mb-3">
+              <div
+                class="d-flex align-items-center justify-content-between gap-3"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <img
+                    src="img/product-1.webp"
+                    alt="صورة"
+                    class="rounded-3 cart-item-img border p-1"
+                    style="width: 50px; height: 50px; object-fit: cover"
+                  />
+                  <div>
+                    <h6 class="mb-1 small cart-title">Wireless Headphones</h6>
+                    <span class="text-muted small">1 × $89.99</span>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-sm text-muted p-0 border-0 fs-5"
+                >
+                  <i class="bi bi-x"></i>
+                </button>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-between gap-3"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <img
+                    src="img/product-2.webp"
+                    alt="صورة"
+                    class="rounded-3 cart-item-img border p-1"
+                    style="width: 50px; height: 50px; object-fit: cover"
+                  />
+                  <div>
+                    <h6 class="mb-1 small cart-title">Smart Watch</h6>
+                    <span class="text-muted small">1 × $129.99</span>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-sm text-muted p-0 border-0 fs-5"
+                >
+                  <i class="bi bi-x"></i>
+                </button>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-between gap-3"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <img
+                    src="img/product-3.webp"
+                    alt="صورة"
+                    class="rounded-3 cart-item-img border p-1"
+                    style="width: 50px; height: 50px; object-fit: cover"
+                  />
+                  <div>
+                    <h6 class="mb-1 small cart-title">Bluetooth Speaker</h6>
+                    <span class="text-muted small">1 × $59.99</span>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-sm text-muted p-0 border-0 fs-5"
+                >
+                  <i class="bi bi-x"></i>
+                </button>
+              </div>
+            </div>
+            <div
+              class="d-flex justify-content-between align-items-center pt-2 mb-3 border-top"
+            >
+              <span class="cart-title">Total:</span>
+              <span class="fs-6 cart-total-price">$279.97</span>
+            </div>
+            <div class="d-flex gap-2">
+              <a
+                href="Cart.html"
+                class="btn btn-cart-outline flex-fill py-2 fw-semibold rounded-5 text-center"
+                >View Cart</a
+              >
+              <a
+                href="Checkout.html"
+                class="btn text-white custom-hover-btn btn-cart-checkout rounded-5 flex-fill py-2 fw-semibold text-center"
+                >Checkout</a
+              >
+            </div>
+          </div>
           <button
             class="navbar-toggler btn border-0 p-2 shadow-none d-md-none"
             type="button"
@@ -546,7 +641,8 @@
             <a
               class="nav-link text-dark fw-medium position-relative nav-animate"
               href="index.html"
-            >Home</a>
+              >Home</a
+            >
           </li>
 
           <li class="nav-item">
@@ -2572,6 +2668,153 @@
           </div>
         </div>
       </div>
+      <!-- section one -->
+      <section class="bg-body-tertiary py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-10">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-1">
+                  <li class="breadcrumb-item">
+                    <a
+                      href="#"
+                      class="text-danger-emphasis text-decoration-none"
+                      >Home</a
+                    >
+                  </li>
+                  <li
+                    class="breadcrumb-item active text-dark-emphasis"
+                    aria-current="page"
+                  >
+                    Contact
+                  </li>
+                </ol>
+              </nav>
+              <h3 class="text-danger-emphasis mt-2">Contact</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section one -->
+      <!-- section two -->
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38195887.77453463!2d-87.87044579033324!3d47.53928779235821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52f871b12365762f%3A0x15342b5792c2e12b!2z2LPYp9iz2YPYp9iq2LTZiNin2YbYjCDZg9mG2K_Ypw!5e0!3m2!1sar!2sfr!4v1784570579248!5m2!1sar!2sfr"
+              height="350"
+              style="border: 0"
+              class="w-100"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- end section two -->
+      <!-- section three -->
+      <section class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="d-flex flex-column gap-4">
+              <div class="d-flex align-items-center">
+                <div
+                  class="contact-icon-box d-flex align-items-center justify-content-center text-white rounded-3 me-3"
+                >
+                  <i class="bi bi-geo-alt fs-5"></i>
+                </div>
+                <div>
+                  <h5 class="mb-1 contact-title texts fw-bold">Address</h5>
+                  <p class="text-muted mb-0 small">
+                    A108 Adam Street, New York, NY 535022
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div
+                  class="contact-icon-box d-flex align-items-center justify-content-center text-white rounded-3 me-3"
+                >
+                  <i class="bi bi-telephone fs-5"></i>
+                </div>
+                <div>
+                  <h5 class="mb-1 contact-title texts fw-bold">Call Us</h5>
+                  <p class="text-muted mb-0 small">+1 5589 55488 55</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div
+                  class="contact-icon-box d-flex align-items-center justify-content-center text-white rounded-3 me-3"
+                >
+                  <i class="bi bi-envelope fs-5"></i>
+                </div>
+                <div>
+                  <h5 class="mb-1 contact-title texts fw-bold">Email Us</h5>
+                  <p class="text-muted mb-0 small">info@example.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 texts">
+            <form>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control checkout-promo-input rounded py-2.5"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control checkout-promo-input rounded py-2.5"
+                    placeholder="Your Email"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control checkout-promo-input rounded py-2.5"
+                  placeholder="Subject"
+                />
+              </div>
+              <div class="mb-4">
+                <textarea
+                  class="form-control checkout-promo-input rounded py-2.5"
+                  rows="5"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="btn text-white custom-hover-btn shadow texts exclusive-product-card contact-submit-btn px-4 py-2.5 fw-semibold border-0"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- end section three -->
+      <a
+        href="#"
+        id="backToTop"
+        class="position-fixed bottom-0 end-0 mb-4 me-4 d-flex align-items-center justify-content-center rounded-circle text-white shadow bg-custom-purple fade"
+        style="
+          width: 48px;
+          height: 48px;
+          z-index: 2000;
+          text-decoration: none;
+          pointer-events: none;
+          background-color: var(--color-button);
+        "
+      >
+        <i class="bi bi-arrow-up fw-bold"></i>
+      </a>
     </main>
     <!-- end main -->
     <!-- footer -->

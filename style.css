@@ -1257,7 +1257,106 @@ footer .p {
 }
 
 .custom-step-line {
-    height: 2px;
-    background-color: #dee2e6;
-    transform: translateY(-10px);
+  height: 2px;
+  background-color: #dee2e6;
+  transform: translateY(-10px);
+}
+
+.checkout-summary-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.checkout-summary-title {
+  color: var(--heading-color);
+}
+
+.checkout-product-img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  background-color: #f8f9fa;
+}
+
+.checkout-promo-input {
+  border: 1px solid #dee2e6;
+  border-radius: 8px 0 0 8px !important;
+  transition:
+    border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.checkout-promo-input:hover {
+  border-color: #adb5bd;
+}
+
+.checkout-promo-input:focus {
+  border-color: var(--heading-color);
+  box-shadow: 0 0 0 3px rgba(128, 0, 64, 0.15);
+  outline: 0;
+  z-index: 2;
+}
+
+.checkout-promo-btn {
+  color: var(--color-button);
+  background-color: var(--background-button);
+  border: 1px solid var(--color-button);
+  border-radius: 0 8px 8px 0 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-button);
+  flex-shrink: 0;
+}
+
+.contact-title {
+  color: var(--heading-color);
+}
+
+.contact-submit-btn {
+  background-color: var(--color-button) !important;
+  border-radius: 6px;
+}
+
+.custom-cart-dropdown-toggle::after {
+  display: none !important;
+}
+
+.custom-cart-dropdown {
+  min-width: 310px;
+  border-radius: 12px;
+}
+
+.cart-title {
+  color: var(--heading-color);
+}
+
+.cart-total-price {
+  color: var(--color-button);
+}
+
+.btn-cart-outline {
+  color: var(--color-button) !important;
+  border-color: var(--color-button) !important;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.btn-cart-outline:hover {
+  background-color: var(--color-button) !important;
+  color: #ffffff !important;
+}
+
+.btn-cart-checkout {
+  background-color: var(--color-button) !important;
+  font-size: 0.9rem;
+  text-decoration: none;
 }
