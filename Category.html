@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- nav one -->
@@ -2697,13 +2698,14 @@
       </section>
       <!-- end section one -->
       <!-- section two -->
-      <section class="container mt-5">
+      <section class="container mt-4">
         <div class="row d-flex justify-content-center mb-5">
           <div class="col-md-10 px-4">
             <div class="row">
               <div class="col-md-4">
                 <div
                   class="card border-light-subtle bg-light texts shadow-sm p-4 mb-4 rounded-3"
+                  data-aos="fade-up"
                 >
                   <div class="d-flex align-items-center mb-4">
                     <div
@@ -3480,7 +3482,7 @@
                   <div class="col-md-12">
                     <div class="card border-0 texts">
                       <div class="card-header bg-white border-bottom py-3 pb-5">
-                        <div class="row align-items-end g-2">
+                        <div class="row align-items-end g-2" data-aos="fade-up">
                           <div class="col-12 col-sm-6 col-md-4 p-1">
                             <label
                               class="form-label small mb-2"
@@ -3578,7 +3580,11 @@
 
                       <div class="card-body">
                         <div class="row">
-                          <div class="col-md-12">
+                          <div
+                            class="col-md-12"
+                            data-aos="fade-up"
+                            data-aos-delay="150"
+                          >
                             <div
                               class="d-flex justify-content-between align-items-center"
                             >
@@ -3627,7 +3633,11 @@
                             </div>
                           </div>
                         </div>
-                        <div class="row">
+                        <div
+                          class="row"
+                          data-aos="fade-up"
+                          data-aos-delay="300"
+                        >
                           <div class="col-md-6 mt-4">
                             <div
                               class="card h-100 border-0 text-start bg-transparent position-relative exclusive-product-card"
@@ -4813,7 +4823,8 @@
       </div>
     </footer>
     <!-- end footer -->
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

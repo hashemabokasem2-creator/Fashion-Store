@@ -323,3 +323,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  AOS.init({
+    duration: 700,
+    once: true,
+    offset: 100,
+  });
+});

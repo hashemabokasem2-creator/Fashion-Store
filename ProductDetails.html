@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- nav one -->
@@ -2700,7 +2701,7 @@
       <section class="container mt-4">
         <div class="row justify-content-center">
           <div class="col-md-5">
-            <div class="row g-2">
+            <div class="row g-2" data-aos="fade-right">
               <div class="col-3 d-flex flex-column align-items-center gap-2">
                 <img
                   src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop&q=80"
@@ -2750,7 +2751,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5" data-aos="fade-left">
             <div class="row">
               <div class="col-md-12">
                 <div class="card h-100 shadow-sm border-0 p-4 texts rounded-3">
@@ -3089,19 +3090,19 @@
       <!-- section three -->
       <section class="container mt-5">
         <div class="row justify-content-center align-items-center">
-          <div class="col-md-9 texts">
+          <div class="col-md-9 texts" data-aos="fade-up">
             <div class="accordion-custom w-100">
               <div class="accordion-item-wrapper mb-4">
                 <div
                   class="accordion-trigger fw-bold py-3"
                   data-bs-toggle="collapse"
                   data-bs-target="#productDescription"
-                  aria-expanded="false"
+                  aria-expanded="true"
                 >
                   Product Description
                 </div>
 
-                <div id="productDescription" class="collapse m-0">
+                <div id="productDescription" class="collapse show m-0">
                   <div class="card-content-box p-4 border shadow-sm">
                     <h5 class="fw-bold mb-3 content-title">Product Overview</h5>
                     <p class="text-muted small mb-4">
@@ -4118,7 +4119,8 @@
       </div>
     </footer>
     <!-- end footer -->
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
