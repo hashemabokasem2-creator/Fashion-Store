@@ -546,7 +546,8 @@
             <a
               class="nav-link text-dark fw-medium position-relative nav-animate"
               href="index.html"
-            >Home</a>
+              >Home</a
+            >
           </li>
 
           <li class="nav-item">
@@ -574,7 +575,7 @@
             <a
               class="nav-link fw-bold border-bottom border-3"
               href="Cart.html"
-               style="
+              style="
                 color: var(--accent-color);
                 border-color: var(--accent-color) !important;
               "
@@ -2572,6 +2573,374 @@
           </div>
         </div>
       </div>
+      <!-- section one -->
+      <section class="bg-body-tertiary py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-1">
+                  <li class="breadcrumb-item">
+                    <a
+                      href="#"
+                      class="text-danger-emphasis text-decoration-none"
+                      >Home</a
+                    >
+                  </li>
+                  <li
+                    class="breadcrumb-item active text-dark-emphasis"
+                    aria-current="page"
+                  >
+                    cart
+                  </li>
+                </ol>
+              </nav>
+              <h3 class="text-danger-emphasis mt-2">cart</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section one -->
+      <!-- section two -->
+      <section class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm p-4 texts">
+              <div
+                class="row text-muted mb-3 d-none d-md-flex pb-2 border-bottom"
+              >
+                <div class="col-md-6">Product</div>
+                <div class="col-md-2 text-center">Price</div>
+                <div class="col-md-2 text-center">Quantity</div>
+                <div class="col-md-2 text-end">Total</div>
+              </div>
+
+              <div
+                class="cart-item row align-items-center py-3 border-bottom mb-3"
+                data-price="89.99"
+              >
+                <div
+                  class="col-md-6 col-12 d-flex align-items-center mb-3 mb-md-0"
+                >
+                  <img
+                    src="img/product-1.webp"
+                    alt="صورة"
+                    class="img-fluid rounded me-3 cart-item-img"
+                  />
+                  <div>
+                    <h6 class="mb-1 product-title">
+                      Lorem ipsum dolor sit amet
+                    </h6>
+                    <p class="text-muted small mb-2">
+                      Color: Black &nbsp; Size: M
+                    </p>
+                    <button
+                      class="btn btn-link p-0 text-muted text-decoration-none small btn-remove"
+                    >
+                      <i class="bi bi-trash"></i> Remove
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="col-md-2 col-4 text-md-center d-flex d-md-block justify-content-between align-items-center"
+                >
+                  <span class="d-md-none text-muted small fw-bold">Price:</span>
+                  <span class="product-price fw-bold">$89.99</span>
+                </div>
+                <div
+                  class="col-md-2 col-4 d-flex justify-content-md-center justify-content-end align-items-center"
+                >
+                  <div class="input-group quantity-group rounded">
+                    <button class="btn btn-minus" type="button">-</button>
+                    <input
+                      type="text"
+                      class="form-control text-center quantity-input"
+                      value="1"
+                      readonly
+                    />
+                    <button class="btn btn-plus" type="button">+</button>
+                  </div>
+                </div>
+                <div
+                  class="col-md-2 col-4 text-md-end text-end d-flex d-md-block justify-content-between align-items-center"
+                >
+                  <span class="d-md-none text-muted small fw-bold">Total:</span>
+                  <span class="item-total fw-bold">$89.99</span>
+                </div>
+              </div>
+
+              <div
+                class="cart-item row align-items-center py-3 border-bottom mb-3"
+                data-price="64.99"
+              >
+                <div
+                  class="col-md-6 col-12 d-flex align-items-center mb-3 mb-md-0"
+                >
+                  <img
+                    src="img/product-3.webp"
+                    alt="صورة"
+                    class="img-fluid rounded me-3 cart-item-img"
+                  />
+                  <div>
+                    <h6 class="mb-1 product-title">
+                      Consectetur adipiscing elit
+                    </h6>
+                    <p class="text-muted small mb-2">
+                      Color: White &nbsp; Size: L
+                    </p>
+                    <button
+                      class="btn btn-link p-0 text-muted text-decoration-none small btn-remove"
+                    >
+                      <i class="bi bi-trash"></i> Remove
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="col-md-2 col-4 text-md-center d-flex d-md-block justify-content-between align-items-center"
+                >
+                  <span class="d-md-none text-muted small fw-bold">Price:</span>
+                  <div>
+                    <span class="product-price fw-bold">$64.99</span>
+                    <span
+                      class="text-muted text-decoration-line-through small ms-1"
+                      >$79.99</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="col-md-2 col-4 d-flex justify-content-md-center justify-content-end align-items-center"
+                >
+                  <div class="input-group quantity-group rounded">
+                    <button class="btn btn-minus" type="button">-</button>
+                    <input
+                      type="text"
+                      class="form-control text-center quantity-input"
+                      value="1"
+                      readonly
+                    />
+                    <button class="btn btn-plus" type="button">+</button>
+                  </div>
+                </div>
+                <div
+                  class="col-md-2 col-4 text-md-end text-end d-flex d-md-block justify-content-between align-items-center"
+                >
+                  <span class="d-md-none text-muted small fw-bold">Total:</span>
+                  <span class="item-total fw-bold">$64.99</span>
+                </div>
+              </div>
+
+              <div
+                class="cart-item row align-items-center py-3 border-bottom mb-4"
+                data-price="49.99"
+              >
+                <div
+                  class="col-md-6 col-12 d-flex align-items-center mb-3 mb-md-0"
+                >
+                  <img
+                    src="img/product-5.webp"
+                    alt="صورة"
+                    class="img-fluid rounded me-3 cart-item-img"
+                  />
+                  <div>
+                    <h6 class="mb-1 product-title">Sed do eiusmod tempor</h6>
+                    <p class="text-muted small mb-2">
+                      Color: Blue &nbsp; Size: S
+                    </p>
+                    <button
+                      class="btn btn-link p-0 text-muted text-decoration-none small btn-remove"
+                    >
+                      <i class="bi bi-trash"></i> Remove
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="col-md-2 col-4 text-md-center d-flex d-md-block justify-content-between align-items-center"
+                >
+                  <span class="d-md-none text-muted small fw-bold">Price:</span>
+                  <span class="product-price fw-bold">$49.99</span>
+                </div>
+                <div
+                  class="col-md-2 col-4 d-flex justify-content-md-center justify-content-end align-items-center"
+                >
+                  <div class="input-group quantity-group rounded">
+                    <button class="btn btn-minus" type="button">-</button>
+                    <input
+                      type="text"
+                      class="form-control text-center quantity-input"
+                      value="1"
+                      readonly
+                    />
+                    <button class="btn btn-plus" type="button">+</button>
+                  </div>
+                </div>
+                <div
+                  class="col-md-2 col-4 text-md-end text-end d-flex d-md-block justify-content-between align-items-center"
+                >
+                  <span class="d-md-none text-muted small fw-bold">Total:</span>
+                  <span class="item-total fw-bold">$49.99</span>
+                </div>
+              </div>
+
+              <div class="row align-items-center gy-3">
+                <div class="col-lg-6 col-12">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control coupon-input"
+                      placeholder="Coupon code"
+                    />
+                    <button class="btn btn-coupon" type="button">
+                      Apply Coupon
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-6 col-12 d-flex justify-content-lg-end justify-content-between gap-2"
+                >
+                  <button
+                    class="btn btn-outline-secondary btn-action d-flex align-items-center gap-1"
+                    type="button"
+                  >
+                    <i class="bi bi-arrow-clockwise"></i> Update Cart
+                  </button>
+                  <button
+                    class="btn btn-outline-danger btn-action btn-clear d-flex align-items-center gap-1"
+                    type="button"
+                  >
+                    <i class="bi bi-trash"></i> Clear Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card summary-card border-0 p-4 texts">
+              <h4 class="summary-title fw-bold mb-0">Order Summary</h4>
+              <hr class="text-muted opacity-25 mb-2" />
+              <div class="row mb-3">
+                <div class="col-6 text-muted">Subtotal</div>
+                <div class="col-6 text-end fw-bold summary-text-dark">
+                  $269.96
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-4 text-muted">Shipping</div>
+                <div class="col-8">
+                  <div
+                    class="custom-radio mb-2 d-flex align-items-center justify-content-end"
+                  >
+                    <input
+                      class="form-check-input m-0"
+                      type="radio"
+                      name="shippingOptions"
+                      id="shipping1"
+                      checked
+                    />
+                    <label
+                      class="form-check-label text-muted ms-2"
+                      for="shipping1"
+                      >Standard Delivery - $4.99</label
+                    >
+                  </div>
+                  <div
+                    class="custom-radio mb-2 d-flex align-items-center justify-content-end"
+                  >
+                    <input
+                      class="form-check-input m-0"
+                      type="radio"
+                      name="shippingOptions"
+                      id="shipping2"
+                    />
+                    <label
+                      class="form-check-label text-muted ms-2"
+                      for="shipping2"
+                      >Express Delivery - $12.99</label
+                    >
+                  </div>
+                  <div
+                    class="custom-radio mb-2 d-flex align-items-center justify-content-end"
+                  >
+                    <input
+                      class="form-check-input m-0"
+                      type="radio"
+                      name="shippingOptions"
+                      id="shipping3"
+                    />
+                    <label
+                      class="form-check-label text-muted ms-1"
+                      for="shipping3"
+                      >Free Shipping (Orders over $300)</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-6 text-muted">Tax</div>
+                <div class="col-6 text-end fw-bold summary-text-dark">
+                  $27.00
+                </div>
+              </div>
+              <div class="row mb-0">
+                <div class="col-6 text-muted">Discount</div>
+                <div class="col-6 text-end fw-bold summary-text-dark">
+                  -$0.00
+                </div>
+              </div>
+
+              <hr class="text-muted opacity-25 mb-2" />
+              <div class="row align-items-center mb-4">
+                <div class="col-5">
+                  <h6 class="fw-bold summary-text-dark m-0">Total</h6>
+                </div>
+                <div class="col-7 text-end">
+                  <h4 class="fw-bold summary-text-dark m-0">$301.95</h4>
+                </div>
+              </div>
+              <button
+                class="btn btn-checkout text-white w-100 py-2.5 mb-3 d-flex align-items-center justify-content-center"
+              >
+                Proceed to Checkout <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+
+              <a
+                href="#"
+                class="btn-continue d-block text-center fw-semibold text-decoration-none mb-1"
+              >
+                <i class="bi bi-arrow-left me-1"></i> Continue Shopping
+              </a>
+
+              <hr class="text-muted opacity-25 mb-3" />
+              <div class="payment-section text-center">
+                <small class="text-muted d-block mb-2">We Accept</small>
+                <div
+                  class="d-flex justify-content-center gap-3 fs-5 payment-icons"
+                >
+                  <i class="bi bi-credit-card"></i>
+                  <i class="bi bi-paypal"></i>
+                  <i class="bi bi-wallet2"></i>
+                  <i class="bi bi-bank"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section two -->
+      <a
+        href="#"
+        id="backToTop"
+        class="position-fixed bottom-0 end-0 mb-4 me-4 d-flex align-items-center justify-content-center rounded-circle text-white shadow bg-custom-purple fade"
+        style="
+          width: 48px;
+          height: 48px;
+          z-index: 2000;
+          text-decoration: none;
+          pointer-events: none;
+          background-color: var(--color-button);
+        "
+      >
+        <i class="bi bi-arrow-up fw-bold"></i>
+      </a>
     </main>
     <!-- end main -->
     <!-- footer -->

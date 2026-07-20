@@ -1054,3 +1054,159 @@ footer .p {
 .small-status-text {
   font-size: 0.85rem;
 }
+
+.product-title,
+.product-price,
+.item-total {
+  color: var(--heading-color);
+}
+
+.cart-item-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.quantity-group {
+  max-width: 100px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.quantity-group .btn-minus,
+.quantity-group .btn-plus {
+  border: none;
+  color: #666;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.quantity-group .btn-minus:hover,
+.quantity-group .btn-plus:hover {
+  background-color: var(--background-button) !important;
+}
+
+.quantity-group .quantity-input {
+  border-top: none;
+  border-bottom: none;
+  background-color: #fff;
+  padding: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--heading-color);
+}
+
+.quantity-group .quantity-input:focus {
+  box-shadow: none;
+}
+
+.coupon-input {
+  border-color: #ddd;
+}
+
+.coupon-input:focus {
+  box-shadow: none;
+  border-color: #ccc;
+}
+
+.btn-coupon {
+  background-color: #333538 !important;
+  color: var(--background-button) !important;
+  border: none;
+}
+
+.btn-coupon:hover {
+  background-color: var(--accent-color) !important;
+}
+
+.btn-action {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.btn-outline-secondary.btn-action {
+  color: var(--heading-color);
+  border-color: var(--heading-color);
+}
+
+.btn-outline-secondary.btn-action:hover {
+  background-color: var(--heading-color);
+  color: #fff;
+}
+
+.btn-outline-danger.btn-action.btn-clear {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-outline-danger.btn-action.btn-clear:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.summary-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+}
+
+.summary-title,
+.summary-text-dark {
+  color: var(--heading-color);
+}
+
+.btn-checkout {
+  background-color: var(--color-button) !important;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn-continue {
+  color: var(--color-button) !important;
+  font-size: 0.95rem;
+}
+
+.custom-radio .form-check-input {
+  border-color: #ced4da;
+  cursor: pointer;
+}
+
+.custom-radio .form-check-input:checked {
+  background-color: var(--color-button);
+  border-color: var(--color-button);
+  box-shadow: 0 0 0 0.25rem rgba(128, 0, 32, 0.25);
+}
+
+.custom-radio .form-check-label {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.payment-icons i {
+  color: #6c757d;
+  transition: color 0.2s ease;
+}
+
+.payment-icons i:hover {
+  color: var(--color-button);
+}
+.btn-checkout i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-checkout:hover i {
+  transform: translateX(8px);
+}
+
+.btn-continue i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-continue:hover i {
+  transform: translateX(-8px);
+}

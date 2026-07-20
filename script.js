@@ -58,16 +58,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const min = rangeInput.min || 0;
     const max = rangeInput.max || 1000;
     const value = rangeInput.value;
-
     const percentage = ((value - min) / (max - min)) * 100;
     rangeInput.style.backgroundSize = `${percentage}% 100%`;
 
     maxInput.value = value;
   }
 
-  updateSliderAndInput();
-
-  rangeInput.addEventListener("input", updateSliderAndInput);
+  if (rangeInput && maxInput) {
+    updateSliderAndInput();
+    rangeInput.addEventListener("input", updateSliderAndInput);
+  }
 });
 
 const element232 = document.getElementById("counter-232");
@@ -84,6 +84,8 @@ const duration = 1500;
 const startTime = performance.now();
 
 function updateCounter232(currentTime) {
+  if (!element32) return;
+
   const elapsedTime = currentTime - startTime;
   const progress = Math.min(elapsedTime / duration, 1);
 
@@ -95,6 +97,7 @@ function updateCounter232(currentTime) {
 }
 
 function updateCounter521(currentTime) {
+  if (!element521) return;
   const elapsedTime = currentTime - startTime;
   const progress = Math.min(elapsedTime / duration, 1);
 
@@ -106,6 +109,7 @@ function updateCounter521(currentTime) {
 }
 
 function updateCounter1453(currentTime) {
+  if (!element1453) return;
   const elapsedTime = currentTime - startTime;
   const progress = Math.min(elapsedTime / duration, 1);
 
@@ -117,6 +121,7 @@ function updateCounter1453(currentTime) {
 }
 
 function updateCounter32(currentTime) {
+  if (!element32) return;
   const elapsedTime = currentTime - startTime;
   const progress = Math.min(elapsedTime / duration, 1);
 
@@ -136,33 +141,36 @@ const container = document.getElementById("magnifierContainer");
 const mainImage = document.getElementById("mainImage");
 
 function updateBackground() {
+  if (!container || !mainImage) return;
   container.style.backgroundImage = `url('${mainImage.src}')`;
 }
 updateBackground();
 
-container.addEventListener("mousemove", function (e) {
-  if (e.target.closest(".nav-btn")) {
+if (container) {
+  container.addEventListener("mousemove", function (e) {
+    if (e.target.closest(".nav-btn")) {
+      container.style.backgroundSize = "100%";
+      mainImage.style.opacity = "1";
+      return;
+    }
+
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const xPercent = (x / rect.width) * 100;
+    const yPercent = (y / rect.height) * 100;
+
+    container.style.backgroundSize = "250%";
+    container.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+    mainImage.style.opacity = "0";
+  });
+
+  container.addEventListener("mouseleave", function () {
     container.style.backgroundSize = "100%";
     mainImage.style.opacity = "1";
-    return;
-  }
-
-  const rect = e.currentTarget.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-
-  const xPercent = (x / rect.width) * 100;
-  const yPercent = (y / rect.height) * 100;
-
-  container.style.backgroundSize = "250%";
-  container.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
-  mainImage.style.opacity = "0";
-});
-
-container.addEventListener("mouseleave", function () {
-  container.style.backgroundSize = "100%";
-  mainImage.style.opacity = "1";
-});
+  });
+}
 
 function changeImage(imgElement) {
   mainImage.src = imgElement.src;
@@ -211,17 +219,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnDecrease = document.getElementById("btn-decrease");
   const btnIncrease = document.getElementById("btn-increase");
 
-  btnIncrease.addEventListener("click", function () {
-    let currentValue = parseInt(input.value) || 1;
-    input.value = currentValue + 1;
-  });
+  if (btnIncrease) {
+    btnIncrease.addEventListener("click", function () {
+      let currentValue = parseInt(input.value) || 1;
+      input.value = currentValue + 1;
+    });
+  }
 
-  btnDecrease.addEventListener("click", function () {
-    let currentValue = parseInt(input.value) || 1;
-    if (currentValue > 1) {
-      input.value = currentValue - 1;
-    }
-  });
+  if (btnDecrease) {
+    btnDecrease.addEventListener("click", function () {
+      let currentValue = parseInt(input.value) || 1;
+      if (currentValue > 1) {
+        input.value = currentValue - 1;
+      }
+    });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -237,10 +249,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const container = document.querySelector(".star-rating-container");
-  container.addEventListener("mouseleave", function () {
-    highlightStars(selectedRating);
-  });
+  if (container) {
+    const container = document.querySelector(".star-rating-container");
+    container.addEventListener("mouseleave", function () {
+      highlightStars(selectedRating);
+    });
+  }
 
   stars.forEach((star) => {
     star.addEventListener("click", function () {
@@ -277,4 +291,35 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".cart-item").forEach((item) => {
+    const minusBtn = item.querySelector(".btn-minus");
+    const plusBtn = item.querySelector(".btn-plus");
+    const quantityInput = item.querySelector(".quantity-input");
+    const totalSpan = item.querySelector(".item-total");
+    const price = parseFloat(item.getAttribute("data-price"));
+
+    function updateTotal(quantity) {
+      const total = price * quantity;
+      totalSpan.textContent = `$${total.toFixed(2)}`;
+    }
+
+    minusBtn.addEventListener("click", () => {
+      let currentQty = parseInt(quantityInput.value);
+      if (currentQty > 1) {
+        currentQty--;
+        quantityInput.value = currentQty;
+        updateTotal(currentQty);
+      }
+    });
+
+    plusBtn.addEventListener("click", () => {
+      let currentQty = parseInt(quantityInput.value);
+      currentQty++;
+      quantityInput.value = currentQty;
+      updateTotal(currentQty);
+    });
+  });
 });
