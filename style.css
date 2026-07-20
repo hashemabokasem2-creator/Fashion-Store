@@ -1210,3 +1210,54 @@ footer .p {
 .btn-continue:hover i {
   transform: translateX(-8px);
 }
+
+.custom-text-dark {
+  color: var(--heading-color);
+}
+
+.custom-step-active {
+  background-color: var(--color-button);
+}
+
+.custom-step-inactive {
+  background-color: var(--background-button);
+}
+
+.custom-btn {
+  background-color: var(--color-button) !important;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.custom-inputss {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  color: #495057;
+  transition:
+    border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.custom-inputss::placeholder {
+  color: #ced4da;
+  opacity: 1;
+}
+
+.custom-inputss:hover {
+  border-color: #adb5bd !important;
+}
+
+.custom-inputss:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: var(--heading-color) !important;
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(128, 0, 64, 0.15) !important;
+}
+
+.custom-step-line {
+    height: 2px;
+    background-color: #dee2e6;
+    transform: translateY(-10px);
+}
