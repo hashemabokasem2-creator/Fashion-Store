@@ -223,6 +223,7 @@
             <i class="bi bi-cart3 fs-4 text-dark"></i>
             <span class="fw-medium text-dark d-none d-md-block">Cart</span>
             <span
+              id="nav-cart-badge"
               class="position-absolute top-0 start-100 translate-middle badge rounded-circle d-flex align-items-center justify-content-center"
               style="
                 width: 20px;
@@ -232,89 +233,34 @@
                 background-color: var(--accent-color);
               "
             >
-              3
+              0
             </span>
           </button>
+
           <div
             class="dropdown-menu dropdown-menu-end texts custom-cart-dropdown p-3 shadow-sm border-0 mt-2"
           >
             <div class="pb-2 mb-3 border-bottom">
-              <h6 class="mb-0 cart-title">Shopping Cart (3)</h6>
+              <h6 id="nav-cart-title" class="mb-0 cart-title">
+                Shopping Cart (0)
+              </h6>
             </div>
-            <div class="cart-items-list d-flex flex-column gap-3 mb-3">
-              <div
-                class="d-flex align-items-center justify-content-between gap-3"
-              >
-                <div class="d-flex align-items-center gap-3">
-                  <img
-                    src="img/product-1.webp"
-                    alt="صورة"
-                    class="rounded-3 cart-item-img border p-1"
-                    style="width: 50px; height: 50px; object-fit: cover"
-                  />
-                  <div>
-                    <h6 class="mb-1 small cart-title">Wireless Headphones</h6>
-                    <span class="text-muted small">1 × $89.99</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm text-muted p-0 border-0 fs-5"
-                >
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-              <div
-                class="d-flex align-items-center justify-content-between gap-3"
-              >
-                <div class="d-flex align-items-center gap-3">
-                  <img
-                    src="img/product-2.webp"
-                    alt="صورة"
-                    class="rounded-3 cart-item-img border p-1"
-                    style="width: 50px; height: 50px; object-fit: cover"
-                  />
-                  <div>
-                    <h6 class="mb-1 small cart-title">Smart Watch</h6>
-                    <span class="text-muted small">1 × $129.99</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm text-muted p-0 border-0 fs-5"
-                >
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-              <div
-                class="d-flex align-items-center justify-content-between gap-3"
-              >
-                <div class="d-flex align-items-center gap-3">
-                  <img
-                    src="img/product-3.webp"
-                    alt="صورة"
-                    class="rounded-3 cart-item-img border p-1"
-                    style="width: 50px; height: 50px; object-fit: cover"
-                  />
-                  <div>
-                    <h6 class="mb-1 small cart-title">Bluetooth Speaker</h6>
-                    <span class="text-muted small">1 × $59.99</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm text-muted p-0 border-0 fs-5"
-                >
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-            </div>
+
+            <div
+              id="nav-cart-items"
+              class="cart-items-list d-flex flex-column gap-3 mb-3"
+              style="max-height: 200px; overflow-y: auto"
+            ></div>
+
             <div
               class="d-flex justify-content-between align-items-center pt-2 mb-3 border-top"
             >
               <span class="cart-title">Total:</span>
-              <span class="fs-6 cart-total-price">$279.97</span>
+              <span id="nav-cart-total" class="fs-6 cart-total-price"
+                >$0.00</span
+              >
             </div>
+
             <div class="d-flex gap-2">
               <a
                 href="Cart.html"
@@ -328,6 +274,7 @@
               >
             </div>
           </div>
+
           <button
             class="navbar-toggler btn border-0 p-2 shadow-none d-md-none"
             type="button"
@@ -2819,7 +2766,76 @@
             </form>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+
+
             <div class="card checkout-summary-card border-0 p-4">
+  <h4 class="mb-1 checkout-summary-title">Order Summary</h4>
+
+  <hr class="text-muted opacity-25 mb-3" />
+  <div id="checkout-products-list" class="checkout-summary-products mb-4 pe-1">
+    <!-- سينزل كود المنتجات ديناميكياً هنا عبر السكربت -->
+  </div>
+
+  <hr class="text-muted opacity-25 mb-4 mt-2" />
+  <div class="row mb-2">
+    <div class="col-6 text-muted">Subtotal</div>
+    <div id="checkout-subtotal" class="col-6 text-end text-dark fw-semibold">$0.00</div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-6 text-muted">Shipping</div>
+    <div id="checkout-shipping" class="col-6 text-end text-dark fw-semibold">$9.99</div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-6 text-muted">Tax</div>
+    <div id="checkout-tax" class="col-6 text-end text-dark fw-semibold">$21.00</div>
+  </div>
+
+  <hr class="text-muted opacity-25 mb-3 border-dashed" />
+  <div class="row align-items-center mb-4">
+    <div class="col-6">
+      <h5 class="checkout-summary-title m-0">Total</h5>
+    </div>
+    <div class="col-6 text-end">
+      <h5 id="checkout-total" class="checkout-summary-title m-0">$0.00</h5>
+    </div>
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control checkout-promo-input py-2"
+      placeholder="Promo Code"
+    />
+    <button
+      class="btn outline checkout-promo-btn px-4 fw-bold"
+      type="button"
+    >
+      Apply
+    </button>
+  </div>
+
+  <hr class="text-muted opacity-25 mb-2 mt-2" />
+  <div class="text-center">
+    <div
+      class="d-flex align-items-center justify-content-center mb-3 checkout-summary-title fw-bold small"
+    >
+      <i class="bi bi-shield-check text-success fs-5 me-2"></i>
+      <span>Secure Checkout</span>
+    </div>
+
+    <div
+      class="d-flex justify-content-center gap-3 fs-4 text-secondary opacity-75 payment-icons"
+    >
+      <i class="bi bi-credit-card-2-front"></i>
+      <i class="bi bi-credit-card"></i>
+      <i class="bi bi-paypal"></i>
+      <i class="bi bi-apple"></i>
+    </div>
+  </div>
+</div>
+            <!-- <div class="card checkout-summary-card border-0 p-4">
               <h4 class="mb-1 checkout-summary-title">Order Summary</h4>
 
               <hr class="text-muted opacity-25 mb-3" />
@@ -2921,7 +2937,7 @@
                   <i class="bi bi-apple"></i>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>

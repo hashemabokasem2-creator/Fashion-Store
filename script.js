@@ -331,3 +331,329 @@ document.addEventListener("DOMContentLoaded", () => {
     offset: 100,
   });
 });
+
+// بداية أكواد سلة المنتجات
+
+let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+function saveCartToStorage() {
+  localStorage.setItem("cartItems", JSON.stringify(cart));
+}
+
+function updateCartUI() {
+  const cartContainer = document.getElementById("cart-items-container");
+
+  const emptyCartView = document.getElementById("empty-cart-view");
+
+  if (cart.length === 0) {
+    if (cartContainer) cartContainer.innerHTML = "";
+
+    if (emptyCartView) emptyCartView.classList.remove("d-none");
+
+    const subtotalEl = document.getElementById("cart-subtotal");
+    if (subtotalEl) subtotalEl.innerText = "$0.00";
+
+    const taxEl = document.getElementById("cart-tax");
+    if (taxEl) taxEl.innerText = "$0.00";
+
+    const totalEl = document.getElementById("cart-total");
+    if (totalEl) totalEl.innerText = "$0.00";
+
+    return;
+  }
+
+  if (emptyCartView) emptyCartView.classList.add("d-none");
+
+  let itemsHTML = "";
+  let subtotal = 0;
+
+  cart.forEach((product) => {
+    const itemTotal = product.price * product.quantity;
+    subtotal += itemTotal;
+
+    itemsHTML += `
+      <div class="cart-item row align-items-center gx-1 py-3 border-bottom mb-3" data-id="${product.id}">
+        <div class="col-md-4 col-12 d-flex align-items-center px-3 mb-2 mb-md-0">
+          <img src="${product.image}" alt="${product.title}" class="img-fluid rounded me-2 cart-item-img" style="max-width: 60px;" />
+          <div class="text-truncate">
+            <h6 class="mb-0 text-truncate product-title small fw-bold">${product.title}</h6>
+            <p class="text-muted small mb-0" style="font-size: 0.75rem;">Color: ${product.color} &nbsp; Size: ${product.size}</p>
+          </div>
+        </div>
+        <div class="col-md-2 col-3 text-md-center">
+          <span class="d-md-none text-muted small d-block" style="font-size: 0.7rem;">Price:</span>
+          <span class="product-price fw-bold small">$${product.price.toFixed(2)}</span>
+        </div>
+        <div class="col-md-2 col-4 d-flex mx-3 justify-content-center">
+          <div class="input-group quantity-group rounded input-group-sm">
+            <button class="btn btn-minus px-2" type="button" onclick="decreaseQuantity(${product.id})">-</button>
+            <input type="text" class="form-control text-center quantity-input px-1" value="${product.quantity}" readonly />
+            <button class="btn btn-plus px-2" type="button" onclick="increaseQuantity(${product.id})">+</button>
+          </div>
+        </div>
+        <div class="col-md-2 col-3 text-md-center text-center">
+          <span class="d-md-none text-muted small d-block" style="font-size: 0.7rem;">Total:</span>
+          <span class="item-total fw-bold small">$${itemTotal.toFixed(2)}</span>
+        </div>
+        <div class="col-md-1 col-2 text-end">
+          <button class="btn btn-link p-0 text-danger btn-remove ms-auto" type="button" onclick="removeItem(${product.id})">
+            <i class="bi bi-trash fs-6"></i>
+          </button>
+        </div>
+      </div>
+    `;
+  });
+
+  if (cartContainer) cartContainer.innerHTML = itemsHTML;
+
+  const tax = subtotal * 0.1;
+  const total = subtotal + tax;
+
+  const subtotalEl = document.getElementById("cart-subtotal");
+  if (subtotalEl) subtotalEl.innerText = `$${subtotal.toFixed(2)}`;
+
+  const taxEl = document.getElementById("cart-tax");
+  if (taxEl) taxEl.innerText = `$${tax.toFixed(2)}`;
+
+  const totalEl = document.getElementById("cart-total");
+  if (totalEl) totalEl.innerText = `$${total.toFixed(2)}`;
+
+  // document.getElementById("cart-subtotal").innerText =
+  //   `$${subtotal.toFixed(2)}`;
+  // document.getElementById("cart-tax").innerText = `$${tax.toFixed(2)}`;
+  // document.getElementById("cart-total").innerText = `$${total.toFixed(2)}`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateCartUI();
+});
+
+function increaseQuantity(id) {
+  const item = cart.find((product) => product.id === id);
+  if (item) {
+    item.quantity++;
+    saveAndReloadUI();
+  }
+  updateNavCartUI();
+}
+
+function decreaseQuantity(id) {
+  const item = cart.find((product) => product.id === id);
+  if (item && item.quantity > 1) {
+    item.quantity--;
+    saveAndReloadUI();
+  }
+  updateNavCartUI();
+}
+
+function removeItem(id) {
+  cart = cart.filter((product) => product.id !== id);
+  saveAndReloadUI();
+  updateNavCartUI();
+}
+
+function clearAllCart() {
+  cart = [];
+  saveAndReloadUI();
+  const modalElement = document.getElementById("clearCartModal");
+  const modalInstance = bootstrap.Modal.getInstance(modalElement);
+  if (modalInstance) {
+    modalInstance.hide();
+  }
+  updateNavCartUI();
+}
+
+function saveAndReloadUI() {
+  localStorage.setItem("cartItems", JSON.stringify(cart));
+  updateCartUI();
+}
+
+const clearCartBtn = document.querySelector(".btn-clear");
+if (clearCartBtn) {
+  clearCartBtn.addEventListener("click", () => {
+    if (cart.length > 0) {
+      const clearModal = new bootstrap.Modal(
+        document.getElementById("clearCartModal"),
+      );
+      clearModal.show();
+    }
+  });
+}
+
+const confirmClearBtn = document.getElementById("confirm-clear-cart");
+if (confirmClearBtn) {
+  confirmClearBtn.addEventListener("click", clearAllCart);
+}
+
+const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const btn = event.currentTarget;
+    const productData = {
+      id: Number(btn.dataset.id),
+      title: btn.dataset.title,
+      price: parseFloat(btn.dataset.price),
+      image: btn.dataset.image,
+      color: btn.dataset.color || "Default",
+      size: btn.dataset.size || "Standard",
+      quantity: 1,
+    };
+
+    addProductToCart(productData);
+  });
+});
+
+function addProductToCart(newProduct) {
+  const existingProduct = cart.find((item) => item.id === newProduct.id);
+
+  if (existingProduct) {
+    existingProduct.quantity += 1;
+  } else {
+    cart.push(newProduct);
+  }
+
+  localStorage.setItem("cartItems", JSON.stringify(cart));
+
+  updateNavCartUI();
+
+  if (typeof updateCartUI === "function") {
+    updateCartUI();
+  }
+  showAddToCartToast();
+}
+
+function showAddToCartToast() {
+  const toastElement = document.getElementById("addToCartToast");
+  let toastInstance = bootstrap.Toast.getInstance(toastElement);
+  if (toastElement) {
+    const toast = new bootstrap.Toast(toastElement, { delay: 3000 });
+    toast.show();
+  } else {
+    console.log("لم نجد عنصر الـ HTML الخاص بالـ Toast في هذه الصفحة!");
+  }
+}
+
+function updateNavCartUI() {
+  const badgeEl = document.getElementById("nav-cart-badge");
+  const titleEl = document.getElementById("nav-cart-title");
+  const itemsContainer = document.getElementById("nav-cart-items");
+  const totalEl = document.getElementById("nav-cart-total");
+
+  if (!itemsContainer) return;
+
+  const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const totalPrice = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
+
+  if (badgeEl) badgeEl.innerText = totalCount;
+  if (titleEl) titleEl.innerText = `Shopping Cart (${totalCount})`;
+  if (totalEl) totalEl.innerText = `$${totalPrice.toFixed(2)}`;
+
+  if (cart.length === 0) {
+    itemsContainer.innerHTML = `
+      <div class="text-center py-3 text-muted">
+        <i class="bi bi-cart-x fs-3 d-block mb-1"></i>
+        <span class="small">Your cart is empty</span>
+      </div>
+    `;
+    return;
+  }
+
+  itemsContainer.innerHTML = cart
+    .map(
+      (item) => `
+      <div class="d-flex align-items-center gap-3">
+        <img
+          src="${item.image}"
+          alt="${item.title}"
+          class="rounded-3 cart-item-img border p-1"
+          style="width: 50px; height: 50px; object-fit: cover"
+        />
+        <div>
+          <h6 class="mb-1 small cart-title">${item.title}</h6>
+          <span class="text-muted small">${item.quantity} × $${Number(item.price).toFixed(2)}</span>
+        </div>
+      </div>
+    `,
+    )
+    .join("");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateNavCartUI();
+});
+
+function updateCheckoutUI() {
+  const container = document.getElementById("checkout-products-list");
+  const subtotalEl = document.getElementById("checkout-subtotal");
+  const totalEl = document.getElementById("checkout-total");
+
+  if (!container) return;
+
+  if (cart.length === 0) {
+    container.innerHTML = `
+      <div class="text-center py-4 text-muted">
+        <i class="bi bi-cart-x fs-2 d-block mb-2"></i>
+        <p class="mb-0 fw-medium">Your cart is empty</p>
+      </div>
+    `;
+    if (subtotalEl) subtotalEl.textContent = "$0.00";
+    if (totalEl) totalEl.textContent = "$0.00";
+    return;
+  }
+
+  const shippingPrice = 9.99;
+  const taxPrice = 21.0;
+
+  const subtotal = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
+  const total = subtotal + shippingPrice + taxPrice;
+
+  container.innerHTML = cart
+    .map(
+      (item) => `
+    <div class="d-flex align-items-center mb-3">
+      <img
+        src="${item.image}"
+        alt="${item.title}"
+        class="rounded me-3 checkout-product-img"
+      />
+      <div>
+        <h6 class="mb-1 checkout-summary-title">
+          ${item.title}
+        </h6>
+        ${
+          item.color || item.size
+            ? `
+          <small class="text-muted d-block mb-1">
+            ${item.color ? `Color: ${item.color}` : ""} 
+            ${item.color && item.size ? " | " : ""} 
+            ${item.size ? `Size: ${item.size}` : ""}
+          </small>
+        `
+            : ""
+        }
+        <span class="small fw-bold text-muted">${item.quantity} × </span>
+        <span class="small fw-bold checkout-summary-title">$${Number(item.price).toFixed(2)}</span>
+      </div>
+    </div>
+  `,
+    )
+    .join("");
+
+  if (subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+  if (totalEl) totalEl.textContent = `$${total.toFixed(2)}`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateNavCartUI();
+
+  if (typeof updateCheckoutUI === "function") {
+    updateCheckoutUI();
+  }
+});

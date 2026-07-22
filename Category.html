@@ -223,6 +223,7 @@
             <i class="bi bi-cart3 fs-4 text-dark"></i>
             <span class="fw-medium text-dark d-none d-md-block">Cart</span>
             <span
+              id="nav-cart-badge"
               class="position-absolute top-0 start-100 translate-middle badge rounded-circle d-flex align-items-center justify-content-center"
               style="
                 width: 20px;
@@ -232,89 +233,34 @@
                 background-color: var(--accent-color);
               "
             >
-              3
+              0
             </span>
           </button>
+
           <div
             class="dropdown-menu dropdown-menu-end texts custom-cart-dropdown p-3 shadow-sm border-0 mt-2"
           >
             <div class="pb-2 mb-3 border-bottom">
-              <h6 class="mb-0 cart-title">Shopping Cart (3)</h6>
+              <h6 id="nav-cart-title" class="mb-0 cart-title">
+                Shopping Cart (0)
+              </h6>
             </div>
-            <div class="cart-items-list d-flex flex-column gap-3 mb-3">
-              <div
-                class="d-flex align-items-center justify-content-between gap-3"
-              >
-                <div class="d-flex align-items-center gap-3">
-                  <img
-                    src="img/product-1.webp"
-                    alt="صورة"
-                    class="rounded-3 cart-item-img border p-1"
-                    style="width: 50px; height: 50px; object-fit: cover"
-                  />
-                  <div>
-                    <h6 class="mb-1 small cart-title">Wireless Headphones</h6>
-                    <span class="text-muted small">1 × $89.99</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm text-muted p-0 border-0 fs-5"
-                >
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-              <div
-                class="d-flex align-items-center justify-content-between gap-3"
-              >
-                <div class="d-flex align-items-center gap-3">
-                  <img
-                    src="img/product-2.webp"
-                    alt="صورة"
-                    class="rounded-3 cart-item-img border p-1"
-                    style="width: 50px; height: 50px; object-fit: cover"
-                  />
-                  <div>
-                    <h6 class="mb-1 small cart-title">Smart Watch</h6>
-                    <span class="text-muted small">1 × $129.99</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm text-muted p-0 border-0 fs-5"
-                >
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-              <div
-                class="d-flex align-items-center justify-content-between gap-3"
-              >
-                <div class="d-flex align-items-center gap-3">
-                  <img
-                    src="img/product-3.webp"
-                    alt="صورة"
-                    class="rounded-3 cart-item-img border p-1"
-                    style="width: 50px; height: 50px; object-fit: cover"
-                  />
-                  <div>
-                    <h6 class="mb-1 small cart-title">Bluetooth Speaker</h6>
-                    <span class="text-muted small">1 × $59.99</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm text-muted p-0 border-0 fs-5"
-                >
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-            </div>
+
+            <div
+              id="nav-cart-items"
+              class="cart-items-list d-flex flex-column gap-3 mb-3"
+              style="max-height: 200px; overflow-y: auto"
+            ></div>
+
             <div
               class="d-flex justify-content-between align-items-center pt-2 mb-3 border-top"
             >
               <span class="cart-title">Total:</span>
-              <span class="fs-6 cart-total-price">$279.97</span>
+              <span id="nav-cart-total" class="fs-6 cart-total-price"
+                >$0.00</span
+              >
             </div>
+
             <div class="d-flex gap-2">
               <a
                 href="Cart.html"
@@ -328,6 +274,7 @@
               >
             </div>
           </div>
+
           <button
             class="navbar-toggler btn border-0 p-2 shadow-none d-md-none"
             type="button"
@@ -3511,7 +3458,7 @@
                               style="color: var(--color-button)"
                               >Price Range</label
                             >
-                            <select class="form-select">
+                            <select class="form-select custom-input">
                               <option selected>All Prices</option>
                               <option>Under $25</option>
                               <option>$25 to $50</option>
@@ -3526,7 +3473,7 @@
                               style="color: var(--color-button)"
                               >Sort By</label
                             >
-                            <select class="form-select">
+                            <select class="form-select custom-input">
                               <option selected>Featured</option>
                               <option>Price: Low to High</option>
                               <option>Price: High to Low</option>
@@ -3566,7 +3513,7 @@
                                 </button>
                               </div>
                               <div class="flex-grow-1" style="max-width: 140px">
-                                <select class="form-select">
+                                <select class="form-select custom-input">
                                   <option selected>12 per page</option>
                                   <option>24 per page</option>
                                   <option>48 per page</option>
@@ -3681,7 +3628,13 @@
                                 </div>
 
                                 <button
-                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn"
+                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn add-to-cart-btn"
+                                  data-id="9"
+                                  data-title="glasses"
+                                  data-price="149.99"
+                                  data-image="img/product-3.webp"
+                                  data-color="brown"
+                                  data-size="S"
                                   style="background-color: var(--color-button)"
                                 >
                                   Add to Cart
@@ -3806,7 +3759,13 @@
                                 </div>
 
                                 <button
-                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn"
+                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn add-to-cart-btn"
+                                  data-id="10"
+                                  data-title="backpack"
+                                  data-price="139.99"
+                                  data-image="img/product-6.webp"
+                                  data-color="black"
+                                  data-size="L"
                                   style="background-color: var(--color-button)"
                                 >
                                   Add to Cart
@@ -3932,7 +3891,13 @@
                                 </div>
 
                                 <button
-                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn"
+                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn add-to-cart-btn"
+                                  data-id="11"
+                                  data-title="Women's handbag"
+                                  data-price="89.50"
+                                  data-image="img/product-9.webp"
+                                  data-color="white"
+                                  data-size="L"
                                   style="background-color: var(--color-button)"
                                 >
                                   Add to Cart
@@ -4046,7 +4011,13 @@
                                 </div>
 
                                 <button
-                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn"
+                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn add-to-cart-btn"
+                                  data-id="12"
+                                  data-title="Shose"
+                                  data-price="119.00"
+                                  data-image="img/product-11.webp"
+                                  data-color="white"
+                                  data-size="M"
                                   style="background-color: var(--color-button)"
                                 >
                                   Add to Cart
@@ -4175,7 +4146,13 @@
                                 </div>
 
                                 <button
-                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn"
+                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn add-to-cart-btn"
+                                  data-id="13"
+                                  data-title="Shire"
+                                  data-price="75.00"
+                                  data-image="img/product-2.webp"
+                                  data-color="brown"
+                                  data-size="L"
                                   style="background-color: #475569"
                                 >
                                   Add to Cart
@@ -4302,7 +4279,13 @@
                                 </div>
 
                                 <button
-                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn"
+                                  class="btn py-2 fw-bold text-white border-0 position-absolute bottom-0 start-0 end-0 mx-3 mb-3 w-auto exclusive-boot-btn add-to-cart-btn"
+                                  data-id="14"
+                                  data-title="Shose"
+                                  data-price="64.95"
+                                  data-image="img/product-12.webp"
+                                  data-color="white"
+                                  data-size="S"
                                   style="background-color: var(--color-button)"
                                 >
                                   Add to Cart
@@ -4456,6 +4439,31 @@
         </div>
       </section>
       <!-- end section two -->
+      <div
+        class="toast-container position-fixed bottom-0 end-0 p-3"
+        style="z-index: 1100"
+      >
+        <div
+          id="addToCartToast"
+          class="toast align-items-center text-bg-success border-0 shadow"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="d-flex">
+            <div class="toast-body d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill fs-5"></i>
+              <span>Product added to cart successfully!</span>
+            </div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+      </div>
       <a
         href="#"
         id="backToTop"

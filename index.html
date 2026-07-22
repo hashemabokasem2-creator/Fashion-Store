@@ -214,6 +214,7 @@
               0
             </span>
           </button>
+
           <button
             type="button"
             class="btn border-0 p-0 position-relative d-inline-flex align-items-center gap-2 dropdown-toggle custom-cart-dropdown-toggle"
@@ -223,6 +224,7 @@
             <i class="bi bi-cart3 fs-4 text-dark"></i>
             <span class="fw-medium text-dark d-none d-md-block">Cart</span>
             <span
+              id="nav-cart-badge"
               class="position-absolute top-0 start-100 translate-middle badge rounded-circle d-flex align-items-center justify-content-center"
               style="
                 width: 20px;
@@ -232,89 +234,34 @@
                 background-color: var(--accent-color);
               "
             >
-              3
+              0
             </span>
           </button>
+
           <div
             class="dropdown-menu dropdown-menu-end texts custom-cart-dropdown p-3 shadow-sm border-0 mt-2"
           >
             <div class="pb-2 mb-3 border-bottom">
-              <h6 class="mb-0 cart-title">Shopping Cart (3)</h6>
+              <h6 id="nav-cart-title" class="mb-0 cart-title">
+                Shopping Cart (0)
+              </h6>
             </div>
-            <div class="cart-items-list d-flex flex-column gap-3 mb-3">
-              <div
-                class="d-flex align-items-center justify-content-between gap-3"
-              >
-                <div class="d-flex align-items-center gap-3">
-                  <img
-                    src="img/product-1.webp"
-                    alt="صورة"
-                    class="rounded-3 cart-item-img border p-1"
-                    style="width: 50px; height: 50px; object-fit: cover"
-                  />
-                  <div>
-                    <h6 class="mb-1 small cart-title">Wireless Headphones</h6>
-                    <span class="text-muted small">1 × $89.99</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm text-muted p-0 border-0 fs-5"
-                >
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-              <div
-                class="d-flex align-items-center justify-content-between gap-3"
-              >
-                <div class="d-flex align-items-center gap-3">
-                  <img
-                    src="img/product-2.webp"
-                    alt="صورة"
-                    class="rounded-3 cart-item-img border p-1"
-                    style="width: 50px; height: 50px; object-fit: cover"
-                  />
-                  <div>
-                    <h6 class="mb-1 small cart-title">Smart Watch</h6>
-                    <span class="text-muted small">1 × $129.99</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm text-muted p-0 border-0 fs-5"
-                >
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-              <div
-                class="d-flex align-items-center justify-content-between gap-3"
-              >
-                <div class="d-flex align-items-center gap-3">
-                  <img
-                    src="img/product-3.webp"
-                    alt="صورة"
-                    class="rounded-3 cart-item-img border p-1"
-                    style="width: 50px; height: 50px; object-fit: cover"
-                  />
-                  <div>
-                    <h6 class="mb-1 small cart-title">Bluetooth Speaker</h6>
-                    <span class="text-muted small">1 × $59.99</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm text-muted p-0 border-0 fs-5"
-                >
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-            </div>
+
+            <div
+              id="nav-cart-items"
+              class="cart-items-list d-flex flex-column gap-3 mb-3"
+              style="max-height: 200px; overflow-y: auto"
+            ></div>
+
             <div
               class="d-flex justify-content-between align-items-center pt-2 mb-3 border-top"
             >
               <span class="cart-title">Total:</span>
-              <span class="fs-6 cart-total-price">$279.97</span>
+              <span id="nav-cart-total" class="fs-6 cart-total-price"
+                >$0.00</span
+              >
             </div>
+
             <div class="d-flex gap-2">
               <a
                 href="Cart.html"
@@ -328,6 +275,7 @@
               >
             </div>
           </div>
+
           <button
             class="navbar-toggler btn border-0 p-2 shadow-none d-md-none"
             type="button"
@@ -4422,7 +4370,15 @@
                 />
 
                 <div class="luxury-hover-overlay">
-                  <button class="btn btn-luxury-cart">
+                  <button
+                    class="btn btn-luxury-cart add-to-cart-btn"
+                    data-id="1"
+                    data-title="Women's handbag"
+                    data-price="89.99"
+                    data-image="img/product-1.webp"
+                    data-color="orange"
+                    data-size="M"
+                  >
                     <i class="bi bi-cart-plus" style="font-size: 1.2rem"></i>
                     Add to Cart
                   </button>
@@ -4514,7 +4470,15 @@
                 />
 
                 <div class="luxury-hover-overlay">
-                  <button class="btn btn-luxury-cart">
+                  <button
+                    class="btn btn-luxury-cart add-to-cart-btn"
+                    data-id="2"
+                    data-title="chair"
+                    data-price="249.99"
+                    data-image="img/product-2.webp"
+                    data-color="Light brown"
+                    data-size="L"
+                  >
                     <i class="bi bi-cart-plus" style="font-size: 1.2rem"></i>
                     Add to Cart
                   </button>
@@ -4607,7 +4571,15 @@
                 />
 
                 <div class="luxury-hover-overlay">
-                  <button class="btn btn-luxury-cart">
+                  <button
+                    class="btn btn-luxury-cart add-to-cart-btn"
+                    data-id="3"
+                    data-title="glasses"
+                    data-price="59.99"
+                    data-image="img/product-3.webp"
+                    data-color="brown"
+                    data-size="S"
+                  >
                     <i class="bi bi-cart-plus" style="font-size: 1.2rem"></i>
                     Add to Cart
                   </button>
@@ -4692,7 +4664,15 @@
                 />
 
                 <div class="luxury-hover-overlay">
-                  <button class="btn btn-luxury-cart">
+                  <button
+                    class="btn btn-luxury-cart add-to-cart-btn"
+                    data-id="4"
+                    data-title="Sweater"
+                    data-price="79.99"
+                    data-image="img/product-4.webp"
+                    data-color="gray"
+                    data-size="M"
+                  >
                     <i class="bi bi-cart-plus" style="font-size: 1.2rem"></i>
                     Add to Cart
                   </button>
@@ -4790,7 +4770,15 @@
                 />
 
                 <div class="luxury-hover-overlay">
-                  <button class="btn btn-luxury-cart">
+                  <button
+                    class="btn btn-luxury-cart add-to-cart-btn"
+                    data-id="5"
+                    data-title="Women's shoes"
+                    data-price="199.99"
+                    data-image="img/product-5.webp"
+                    data-color="Pink"
+                    data-size="M"
+                  >
                     <i class="bi bi-cart-plus" style="font-size: 1.2rem"></i>
                     Add to Cart
                   </button>
@@ -4882,7 +4870,15 @@
                 />
 
                 <div class="luxury-hover-overlay">
-                  <button class="btn btn-luxury-cart">
+                  <button
+                    class="btn btn-luxury-cart add-to-cart-btn"
+                    data-id="6"
+                    data-title="backpack"
+                    data-price="45.99"
+                    data-image="img/product-6.webp"
+                    data-color="black"
+                    data-size="L"
+                  >
                     <i class="bi bi-cart-plus" style="font-size: 1.2rem"></i>
                     Add to Cart
                   </button>
@@ -4975,7 +4971,15 @@
                 />
 
                 <div class="luxury-hover-overlay">
-                  <button class="btn btn-luxury-cart">
+                  <button
+                    class="btn btn-luxury-cart add-to-cart-btn"
+                    data-id="7"
+                    data-title="Jacket"
+                    data-price="69.99"
+                    data-image="img/product-11.png"
+                    data-color="Light blue"
+                    data-size="S"
+                  >
                     <i class="bi bi-cart-plus" style="font-size: 1.2rem"></i>
                     Add to Cart
                   </button>
@@ -5061,7 +5065,15 @@
                 />
 
                 <div class="luxury-hover-overlay">
-                  <button class="btn btn-luxury-cart">
+                  <button
+                    class="btn btn-luxury-cart add-to-cart-btn"
+                    data-id="8"
+                    data-title="Shose"
+                    data-price="159.99"
+                    data-image="img/product-8.jpg"
+                    data-color="blue"
+                    data-size="L"
+                  >
                     <i class="bi bi-cart-plus" style="font-size: 1.2rem"></i>
                     Add to Cart
                   </button>
@@ -5140,6 +5152,31 @@
         </div>
       </section>
       <!-- end section five -->
+      <div
+        class="toast-container position-fixed bottom-0 end-0 p-3"
+        style="z-index: 1100"
+      >
+        <div
+          id="addToCartToast"
+          class="toast align-items-center text-bg-success border-0 shadow"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="d-flex">
+            <div class="toast-body d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill fs-5"></i>
+              <span>Product added to cart successfully!</span>
+            </div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+      </div>
       <a
         href="#"
         id="backToTop"

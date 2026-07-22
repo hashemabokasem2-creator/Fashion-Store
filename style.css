@@ -1360,3 +1360,8 @@ footer .p {
   font-size: 0.9rem;
   text-decoration: none;
 }
+
+.checkout-summary-products {
+  max-height: 280px;
+  overflow-y: auto;
+}
